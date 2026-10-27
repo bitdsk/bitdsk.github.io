@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firmware Upgrade — U1/U2 &middot; BITDSK LAB</title>
+<meta name="description" content="Firmware Upgrade — U1/U2 - bitdsk.org static docs">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+</head>
+<body>
+<div class="sitebar">
+ <div class="wrap row">
+  <a class="brand" href="../index.html">
+   <img class="brand-logo" src="../images/logo.png" srcset="../images/logo@2x.png 2x" alt="Bitdsk" width="118" height="30">
+   <span class="bname">LAB <span>Docs</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="../index.html">Home</a>
+   <a href="../firmware.html">Firmware</a>
+   <a href="../flash.html">Flash</a>
+   <a href="docs.html">Docs</a>
+   <a href="api.html">API</a>
+   <a href="version-comparison.html">Versions</a>
+   <a href="../guides/index.html">Guides</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+ </div>
+</div>
+
+<div class="wrap docpage">
+ <div class="crumb"><a href="../index.html">Home</a> &rsaquo; <span>Firmware</span></div>
+ <article class="doc">
+  <h1>Firmware upgrade For U1_U2</h1>
+  <div class="desc">Firmware documentation.</div>
+  <div class="panel">
+   <content>
+<p class="wp-block-paragraph"></p>
+
+
+
+<h2 class="wp-block-heading">For Board Version: U1 / U2</h2>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<p class="wp-block-paragraph">It is highly recommended to back up your <strong>&#8220;CD KEY&#8221;</strong> before proceeding with the update. You can find it under <strong>&#8220;Settings -&gt; System.&#8221;</strong></p>
+
+
+
+<p class="wp-block-paragraph">There are two ways to update:</p>
+
+
+
+<ol start="1" class="wp-block-list">
+<li><strong>Firmware Only Update:</strong> This method will not clear your settings.</li>
+
+
+
+<li><strong>Full Erase &amp; Rewrite:</strong> This method will clear all settings, including the device&#8217;s <strong>&#8220;CD KEY.&#8221;</strong></li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Even if you choose the <strong>Firmware Only Update</strong> method, you <strong>must</strong> back up your &#8220;CD KEY.&#8221; Unexpected issues—such as update failures, power outages, or accidental drops—can occur. A lost &#8220;CD KEY&#8221; is <strong>unrecoverable</strong>; however, if you have a backup, you can use the &#8220;Full Erase &amp; Rewrite&#8221; method to restore your device if something goes wrong.</p>
+
+
+
+<p class="wp-block-paragraph">The first method is generally recommended. If you choose &#8220;Full Erase &amp; Rewrite,&#8221; you will need to connect to Wi-Fi, access the web management interface, navigate to <strong>&#8220;Settings -&gt; System,&#8221;</strong> enter your <strong>&#8220;CD KEY,&#8221;</strong> save, and restart the device.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p class="wp-block-paragraph"><strong>U1 / U2 Online Update (Firmware Only):</strong> [<a href="../flash.html#u-series" data-ext="1" target="_blank" rel="noreferrer noopener nofollow">Click Here</a>]</p>
+
+
+
+<p class="wp-block-paragraph"><strong>U1 Online Full Erase &amp; Rewrite:</strong> [<a href="../flash.html#u-series" data-ext="1" target="_blank" rel="noreferrer noopener nofollow">Click Here</a>] <a href="../flash.html#u-series" data-ext="1" target="_blank" rel="noreferrer noopener">(</a><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Not recommended</mark><a href="../flash.html#u-series" data-ext="1" target="_blank" rel="noreferrer noopener">)</a><br><strong>U2 Online Full Erase &amp; Rewrite:</strong> [<a href="../flash.html#u-series" data-ext="1" target="_blank" rel="noreferrer noopener nofollow">Click Here</a>]<a href="../flash.html#u-series" data-ext="1" target="_blank" rel="noreferrer noopener">(</a><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Not recommended</mark>)</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th>Time(M.D.Y)</th><th>Version</th><th>Description</th></tr></thead><tbody><tr><td>04.18.2026</td><td>V_1.5.2</td><td>1.Fixed a memory error.<br><br>2.Fixed an issue where some coins were not displaying prices.<br><br>3.Fixed an issue where the candlestick chart only displayed BTC prices.<br><br>4.Optimized the message queue.<br><br>5.Modified the weather retrieval logic.<br><br>6.Reduced screen sensitivity to prevent accidental triggering caused by screen aging.<br><br>7.Fixed an issue where setting the coin to BTC in the background would result in it displaying as BTCUSDT after restarting.<br><br>8.Added the ability to switch between screen fixation and polling.</td></tr><tr><td>04.09.2026</td><td>V_1.5.1</td><td>Optimize the display of UI elements.</td></tr><tr><td>04.09.2026</td><td>V_1.5</td><td>1.Fixed string issues<br>2.Added support for ckpool<br>3.Adding bg.bin only applies to the first screen or all screens.</td></tr><tr><td>04.07.2026</td><td>V_1.4</td><td>Add custom UI functionality</td></tr><tr><td>03.28.2026</td><td>V_1.2</td><td>1.Fixed backend page errors<br><br>2.Modified the method for obtaining hashrate<br><br>3.Modified the style of the Wi-Fi settings page<br><br>4.Added screen prompts, such as: Connecting, Reconnecting after disconnection<br><br>5.Fixed the issue of Wi-Fi names not containing spaces in the Wi-Fi settings interface<br><br>6.Modified screen initialization logic</td></tr><tr><td>&#8211;</td><td>V_1.0</td><td>Default</td></tr><tr><td></td><td></td><td></td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph"></p>
+</content>
+  </div>
+ </article>
+</div>
+
+<footer>
+ <div class="wrap frow">
+  <div><b>BITDSK LAB</b> &mdash; static mirror of bitdsk.org docs &amp; firmware.</div>
+  <div class="links">
+   <a href="../index.html">Home</a>
+   <a href="../firmware.html">Firmware</a>
+   <a href="../flash.html">Flash tool</a>
+   <a href="docs.html">Docs</a>
+   <a href="api.html">API</a>
+   <a href="version-comparison.html">Versions</a>
+  </div>
+ </div>
+ <div class="wrap" style="margin-top:16px;font-size:12.5px">Built as a pure static site for GitHub Pages. No server required.</div>
+</footer>
+<button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# 统一换行符，避免 Windows 检出时把文本文件转成 CRLF
+* text=auto eol=lf
+
+# 二进制文件：禁止任何换行/编码转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.bin binary
+*.woff binary
+*.woff2 binary

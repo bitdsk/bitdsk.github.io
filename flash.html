@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flash Tool — moved to a separate repository</title>
+<meta name="description" content="Browser flashing for Bitdsk S1, U1 and U2 now lives in a dedicated repository. This page is the entry point from the firmware archive.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="sitebar">
+ <div class="wrap row">
+  <a class="brand" href="index.html">
+   <img class="brand-logo" src="images/logo.png" srcset="images/logo@2x.png 2x" alt="Bitdsk" width="118" height="30">
+   <span class="bname">LAB <span>Docs</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="index.html">Home</a>
+   <a href="firmware.html">Firmware</a>
+   <a href="flash.html" class="active">Flash</a>
+   <a href="docs/docs.html">Docs</a>
+   <a href="docs/api.html">API</a>
+   <a href="docs/version-comparison.html">Versions</a>
+   <a href="guides/index.html">Guides</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu">&#9776;</button>
+ </div>
+</div>
+
+<div class="hero compact">
+ <div class="glow-orb" style="width:380px;height:380px;right:-70px;top:-130px;background:radial-gradient(circle,var(--accent),transparent 65%)"></div>
+ <div class="wrap">
+  <span class="badge"><span class="dot"></span>Moved &middot; dedicated repository</span>
+  <h1>The flasher now lives <span class="grad">on its own site</span></h1>
+  <p class="lead">S1, U1 and U2 are three different hardware designs, and their flash images are large. Keeping them next to the flasher keeps this archive light and lets the flashing page ship on its own schedule.</p>
+ </div>
+</div>
+
+<section class="block" style="padding-top:8px">
+ <div class="wrap">
+
+  <div class="notice info">
+   <b>Nothing was lost.</b> Browser flashing still works exactly the same way &mdash; Chrome or Edge on desktop, USB cable, Web Serial. No PHP, no server-side code, no installer. The page and the images simply moved to a separate repository.
+  </div>
+
+  <div class="sec-head" style="margin-top:34px">
+   <div>
+    <div class="eyebrow">Go straight there</div>
+    <h2>Pick your board</h2>
+    <p>Each link opens the flasher anchored on the right board.</p>
+   </div>
+  </div>
+
+  <div class="flash-grid">
+   <div class="flash-card">
+    <div class="mc-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+     <h3>Bitdsk S1</h3>
+     <span class="pill flash">v_1.5</span>
+    </div>
+    <div class="fc-sub">CYD-2432S028 &middot; ESP32 &middot; no ASIC</div>
+    <p style="color:var(--muted);font-size:13.5px;margin:0">Off-the-shelf CYD reference board. Independent firmware &mdash; not interchangeable with U series.</p>
+    <a class="btn btn-primary" href="#" data-flash="#s1">Open S1 flasher &#8599;</a>
+   </div>
+
+   <div class="flash-card">
+    <div class="mc-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+     <h3>Bitdsk U1 Touch</h3>
+     <span class="pill flash">v_1.5.2</span>
+    </div>
+    <div class="fc-sub">In-house &middot; ESP32 &middot; 200G class</div>
+    <p style="color:var(--muted);font-size:13.5px;margin:0">Our own single-ASIC board. Image ships without a CD KEY &mdash; re-enter your backup afterwards.</p>
+    <a class="btn btn-primary" href="#" data-flash="#u1">Open U1 flasher &#8599;</a>
+   </div>
+
+   <div class="flash-card">
+    <div class="mc-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+     <h3>Bitdsk U2 Touch</h3>
+     <span class="pill flash">v_1.5.2</span>
+    </div>
+    <div class="fc-sub">In-house &middot; ESP32 &middot; 1100&ndash;1500G class</div>
+    <p style="color:var(--muted);font-size:13.5px;margin:0">Different silicon from U1. Shares the same application image; only the NVS partition identifies the model.</p>
+    <a class="btn btn-primary" href="#" data-flash="#u2">Open U2 flasher &#8599;</a>
+   </div>
+  </div>
+
+  <div id="flash-missing" class="notice danger" style="display:none">
+   <b>The flasher address is not configured yet.</b>
+   Set <code>flashBase</code> in <code>js/config.js</code> to the URL of the flash repository
+   (for example <code>../bitdsk-flash/</code> or <code>https://&lt;user&gt;.github.io/bitdsk-flash/</code>),
+   and these buttons will point at it.
+  </div>
+
+  <div class="notice" style="margin-top:26px">
+   <b>N5 series, N8 series and legacy boards are not flashed in the browser.</b>
+   Those devices update by uploading a <code>.zip</code> through the miner web UI &mdash; the files are right here in the
+   <a href="firmware.html" style="color:var(--accent)">firmware archive</a>.
+  </div>
+
+  <div class="sec-head" style="margin-top:38px">
+   <div>
+    <div class="eyebrow">Why a separate repository</div>
+    <h2>What moved and what stayed</h2>
+   </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))">
+   <div class="card">
+    <h3 style="margin-top:0">Moved to the flasher</h3>
+    <ol class="steps">
+     <li>The flashing page itself, plus the Web Serial component (bundled locally, no CDN).</li>
+     <li>Full flash images for S1, U1 and U2 &mdash; bootloader, partition table, NVS, app, OTA data.</li>
+     <li>The <code>manifest.json</code> for each board that tells the flasher where to write.</li>
+    </ol>
+   </div>
+   <div class="card">
+    <h3 style="margin-top:0">Stayed in this archive</h3>
+    <ol class="steps">
+     <li>All OTA <code>.zip</code> downloads for N5, N8 and legacy boards.</li>
+     <li>U series OTA single image and UI theme backgrounds.</li>
+     <li>Every guide, API reference and version comparison page.</li>
+    </ol>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="frow">
+   <div class="fcol">
+    <b>BITDSK LAB</b>
+    <p style="margin:6px 0 0">Firmware archive, documentation and operating guides. Flashing is hosted separately.</p>
+   </div>
+   <div class="links">
+    <a href="index.html">Home</a>
+    <a href="firmware.html">Firmware</a>
+    <a href="docs/docs.html">Docs</a>
+    <a href="docs/api.html">API</a>
+    <a href="docs/version-comparison.html">Versions</a>
+    <a href="guides/index.html">Guides</a>
+   </div>
+  </div>
+  <div class="fine">Browser flashing requires HTTPS and a Chromium-based desktop browser.</div>
+ </div>
+</footer>
+
+<button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+<script>
+/* 把引导按钮指向烧录站；未配置时给出明确提示，而不是死链 */
+(function () {
+  var cfg = window.BITDSK_CONFIG || {};
+  var base = String(cfg.flashBase || '').replace(/\/+$/, '');
+  var btns = document.querySelectorAll('[data-flash]');
+  if (!base) {
+    var warn = document.getElementById('flash-missing');
+    if (warn) warn.style.display = '';
+    Array.prototype.forEach.call(btns, function (a) {
+      a.removeAttribute('href');
+      a.style.opacity = '.45';
+      a.style.pointerEvents = 'none';
+    });
+    return;
+  }
+  Array.prototype.forEach.call(btns, function (a) {
+    a.href = base + '/' + (a.getAttribute('data-flash') || '');
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+})();
+</script>
+</body>
+</html>

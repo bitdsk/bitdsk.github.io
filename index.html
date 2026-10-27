@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BITDSK LAB — Firmware Archive, Docs &amp; Flash Tools</title>
+<meta name="description" content="Bitdsk firmware archive: SHA256 miner firmware grouped by model, PDF user guides, API reference, version comparison and browser-based flashing tools. All files hosted locally, no redirects.">
+<meta property="og:title" content="BITDSK LAB — Firmware Archive &amp; Docs">
+<meta property="og:description" content="Firmware grouped by model, user guides, API docs and in-browser flashing for Bitdsk SHA256 miners.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="sitebar">
+ <div class="wrap row">
+  <a class="brand" href="index.html">
+   <img class="brand-logo" src="images/logo.png" srcset="images/logo@2x.png 2x" alt="Bitdsk" width="118" height="30">
+   <span class="bname">LAB <span>Docs</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="index.html" class="active">Home</a>
+   <a href="firmware.html">Firmware</a>
+   <a href="flash.html">Flash</a>
+   <a href="docs/docs.html">Docs</a>
+   <a href="docs/api.html">API</a>
+   <a href="docs/version-comparison.html">Versions</a>
+   <a href="guides/index.html">Guides</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu">&#9776;</button>
+ </div>
+</div>
+
+<div class="hero">
+ <div class="glow-orb" style="width:440px;height:440px;left:-100px;top:-140px;background:radial-gradient(circle,var(--accent),transparent 65%)"></div>
+ <div class="glow-orb" style="width:400px;height:400px;right:-80px;top:10px;background:radial-gradient(circle,var(--accent-2),transparent 65%)"></div>
+ <div class="wrap">
+  <span class="badge"><span class="dot"></span>Bitdsk Labs &middot; SHA256 miner firmware &amp; docs</span>
+  <h1>Firmware, docs and <span class="grad">flash tools</span><br>for every Bitdsk miner</h1>
+  <p class="lead">Pick your model and get the right build. Every release is indexed here — direct download from the archive, byte sizes and SHA256 published, no countdown, no account, no dead hosts.</p>
+  <div class="cta">
+   <a class="btn btn-primary" href="firmware.html">Browse firmware archive &#8599;</a>
+   <a class="btn btn-ghost" href="flash.html">Flash in browser &#8599;</a>
+  </div>
+  <div class="stats">
+   <div class="stat"><div class="n" data-stat="files">41</div><div class="l">Files indexed</div></div>
+   <div class="stat"><div class="n" data-stat="models">6</div><div class="l">Model groups</div></div>
+   <div class="stat"><div class="n" data-stat="size">49.3 MB</div><div class="l">Total archive</div></div>
+   <div class="stat"><div class="n" data-stat="guides">8</div><div class="l">PDF guides</div></div>
+  </div>
+ </div>
+</div>
+
+<section class="block" id="models">
+ <div class="wrap">
+  <div class="sec-head">
+   <div>
+    <div class="eyebrow">Step 1 — identify your board</div>
+    <h2>Our current line-up</h2>
+    <p>Five boards in production. Find the name on your device or its box, then open that model.</p>
+   </div>
+   <a class="btn btn-sm" href="docs/version-comparison.html">Compare hardware specs</a>
+  </div>
+
+  <div class="model-grid">
+
+   <!-- N8-T -->
+   <a class="model-card" href="firmware.html#n8-series">
+    <div class="mc-top">
+     <div>
+      <h3 class="mc-name">N8-T</h3>
+      <div class="mc-sub">Single ASIC &middot; 0.91&Prime; mono</div>
+     </div>
+     <span class="pill active">In production</span>
+    </div>
+    <p class="mc-desc">Compact single-ASIC miner. 200G at roughly 8.9&nbsp;W, powered over USB-C &mdash; the smallest of the ASIC line.</p>
+    <div class="mc-chips"><span>200G</span><span>&asymp;8.9 W</span><span>USB-C</span><span>Fan control</span></div>
+    <div class="mc-foot">
+     <span class="mc-latest">OTA firmware</span>
+     <span class="mc-go">View firmware &rarr;</span>
+    </div>
+   </a>
+
+   <!-- U1 -->
+   <a class="model-card" href="firmware.html#u-series">
+    <div class="mc-top">
+     <div>
+      <h3 class="mc-name">U1 Touch</h3>
+      <div class="mc-sub">Single ASIC &middot; 2.8&Prime; touch</div>
+     </div>
+     <span class="pill active">In production</span>
+    </div>
+    <p class="mc-desc">Entry ASIC model with a full touchscreen. 200G at about 10&nbsp;W &mdash; quiet enough to sit on a desk and cheap to run around the clock.</p>
+    <div class="mc-chips"><span>200G</span><span>&asymp;10 W</span><span>DC / Type-C</span><span>Temp sensor</span></div>
+    <div class="mc-foot">
+     <span class="mc-latest">OTA &middot; browser flash</span>
+     <span class="mc-go">View firmware &rarr;</span>
+    </div>
+   </a>
+
+   <!-- U2 -->
+   <a class="model-card" href="firmware.html#u-series">
+    <div class="mc-top">
+     <div>
+      <h3 class="mc-name">U2 Touch</h3>
+      <div class="mc-sub">Single ASIC &middot; 2.8&Prime; touch</div>
+     </div>
+     <span class="pill active">In production</span>
+    </div>
+    <p class="mc-desc">The high-hashrate model &mdash; 5&ndash;7&times; the output of U1 at 22&ndash;27&nbsp;W. Better hashes per watt, at the cost of heat and noise.</p>
+    <div class="mc-chips"><span>1100&ndash;1500G</span><span>&asymp;22&ndash;27 W</span><span>DC 5V 5A</span><span>Temp sensor</span></div>
+    <div class="mc-foot">
+     <span class="mc-latest">OTA &middot; browser flash</span>
+     <span class="mc-go">View firmware &rarr;</span>
+    </div>
+   </a>
+
+   <!-- D12 -->
+   <a class="model-card" href="firmware.html#n5-series">
+    <div class="mc-top">
+     <div>
+      <h3 class="mc-name">D12 / D12-T</h3>
+      <div class="mc-sub">Single ASIC &middot; 1.9&Prime; colour</div>
+     </div>
+     <span class="pill active">In production</span>
+    </div>
+    <p class="mc-desc">Mid-size single-ASIC miner with a colour screen. 200G at about 8.9&nbsp;W on a 12&nbsp;V DC supply.</p>
+    <div class="mc-chips"><span>200G</span><span>&asymp;8.9 W</span><span>DC 12V</span><span>1.9&Prime; colour</span></div>
+    <div class="mc-foot">
+     <span class="mc-latest">OTA firmware</span>
+     <span class="mc-go">View firmware &rarr;</span>
+    </div>
+   </a>
+
+   <!-- S1 -->
+   <a class="model-card" href="flash.html#s1">
+    <div class="mc-top">
+     <div>
+      <h3 class="mc-name">S1</h3>
+      <div class="mc-sub">No ASIC &middot; open source</div>
+     </div>
+     <span class="pill tool">Free &middot; MIT</span>
+    </div>
+    <p class="mc-desc">Runs on the off-the-shelf CYD board. The ESP32 hashes by itself, so it is a desk display and learning board &mdash; and the firmware is fully open source.</p>
+    <div class="mc-chips"><span>600k&ndash;800k H/s</span><span>USB 5V</span><span>2.8&Prime; touch</span><span>MIT</span></div>
+    <div class="mc-foot">
+     <span class="mc-latest">Source on <b>GitHub</b></span>
+     <span class="mc-go">Flash &amp; source &rarr;</span>
+    </div>
+   </a>
+
+  </div>
+
+  <p style="margin:22px 0 0;color:var(--faint);font-size:13.5px">
+   Also in the archive:
+   <a href="firmware.html#n5-series" style="color:var(--muted)">N5.Rex</a> &middot;
+   <a href="firmware.html#n8-series" style="color:var(--muted)">N5.Rexi-T</a> &middot;
+   <a href="firmware.html#legacy" style="color:var(--muted)">legacy boards</a> &middot;
+   <a href="firmware.html#tools" style="color:var(--muted)">PC management tools</a>
+  </p>
+ </div>
+</section>
+
+<section class="block">
+ <div class="wrap">
+  <div class="sec-head">
+   <div>
+    <div class="eyebrow">Two ways to update</div>
+    <h2>OTA or full reflash</h2>
+    <p>Which one you need depends on what state the device is in.</p>
+   </div>
+  </div>
+  <div class="grid">
+   <div class="card">
+    <div class="cicon">&#8635;</div>
+    <h3>OTA upgrade (normal)</h3>
+    <p>Download the <code>.zip</code> for your model, open the miner's web UI, go to <b>Settings &rarr; Firmware</b> and upload it. Settings and CD KEY are preserved. This is the right choice 95% of the time.</p>
+    <a class="arrow" href="firmware.html">Find your build &rarr;</a>
+   </div>
+   <div class="card">
+    <div class="cicon">&#9889;</div>
+    <h3>Full erase &amp; reflash</h3>
+    <p>For a bricked board, a wiped CD KEY, or a device that will not boot. Needs a USB cable and Chrome/Edge — the flasher runs entirely in the browser using the local image files.</p>
+    <a class="arrow" href="flash.html">Open flash tool &rarr;</a>
+   </div>
+   <div class="card">
+    <div class="cicon">&#9888;</div>
+    <h3>Before you start</h3>
+    <p>Back up your <b>CD KEY</b> from <b>Settings &rarr; System</b>. If the key is lost it cannot be recovered — a backup is the only way to restore a device after a full erase.</p>
+    <a class="arrow" href="docs/docs.html">Read the guides &rarr;</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="block">
+ <div class="wrap">
+  <div class="sec-head">
+   <div>
+    <div class="eyebrow">Reference</div>
+    <h2>Documentation &amp; tools</h2>
+    <p>Guides, API endpoints, hardware comparison and the PC batch manager.</p>
+   </div>
+  </div>
+  <div class="grid">
+   <a class="card" href="docs/docs.html">
+    <div class="cicon">&#128214;</div>
+    <h3>User guides &amp; resources</h3>
+    <p>Bilingual PDF manuals for the All / N / D series, plus tutorials and PCB files.</p>
+    <span class="arrow">Open &rarr;</span>
+   </a>
+   <a class="card" href="guides/index.html">
+    <div class="cicon">&#128218;</div>
+    <h3>Guides &amp; reference</h3>
+    <p>Operating how-tos: antenna install, pool forwarding, frequency tuning, hotspot recovery.</p>
+    <span class="arrow">Open &rarr;</span>
+   </a>
+   <a class="card" href="docs/api.html">
+    <div class="cicon">&#128279;</div>
+    <h3>API reference</h3>
+    <p>JSON endpoints for pool configuration, status polling and remote control.</p>
+    <span class="arrow">Open &rarr;</span>
+   </a>
+   <a class="card" href="docs/version-comparison.html">
+    <div class="cicon">&#8646;</div>
+    <h3>Version comparison</h3>
+    <p>Side-by-side hardware specs: screen, hashrate, power and supply per model.</p>
+    <span class="arrow">Open &rarr;</span>
+   </a>
+   <a class="card" href="firmware.html#tools">
+    <div class="cicon">&#128736;</div>
+    <h3>PC management tools</h3>
+    <p>Windows batch manager for monitoring and upgrading several miners at once.</p>
+    <span class="arrow">Open &rarr;</span>
+   </a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="frow">
+   <div class="fcol">
+    <b>BITDSK LAB</b>
+    <p style="margin:6px 0 0">Static mirror of the Bitdsk firmware archive and documentation. Built for GitHub Pages — no server, no database.</p>
+   </div>
+   <div class="links">
+    <a href="firmware.html">Firmware</a>
+    <a href="flash.html">Flash tool</a>
+    <a href="docs/docs.html">Docs</a>
+    <a href="docs/api.html">API</a>
+    <a href="docs/version-comparison.html">Versions</a>
+   </div>
+  </div>
+  <div class="fine">Data generated <span data-generated>—</span>. All firmware files are stored in this repository; SHA256 checksums are listed on the firmware page.</div>
+ </div>
+</footer>
+
+<button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

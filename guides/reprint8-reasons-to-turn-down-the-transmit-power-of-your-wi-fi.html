@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Reprint]8 reasons to turn down the transmit power of your Wi-Fi — BITDSK LAB</title>
+<meta name="description" content="By default almost all WiFi access points transmit at full power (100mW on 2.4GHz). This gives maximum coverage and users see a good signal (“full bars">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="sitebar">
+ <div class="wrap row">
+  <a class="brand" href="../index.html">
+   <img class="brand-logo" src="../images/logo.png" srcset="../images/logo@2x.png 2x" alt="Bitdsk" width="118" height="30">
+   <span class="bname">LAB <span>Docs</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="../index.html">Home</a>
+   <a href="../firmware.html">Firmware</a>
+   <a href="../flash.html">Flash</a>
+   <a href="../docs/docs.html">Docs</a>
+   <a href="../docs/api.html">API</a>
+   <a href="../docs/version-comparison.html">Versions</a>
+   <a href="index.html">Guides</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu">&#9776;</button>
+ </div>
+</div>
+
+<div class="wrap docpage">
+ <div class="crumb"><a href="../index.html">Home</a> &rsaquo; <a href="index.html">Guides</a> &rsaquo; <span>[Reprint]8 reasons to turn down the transmit power of your Wi-Fi</span></div>
+ <article class="doc">
+  <h1>[Reprint]8 reasons to turn down the transmit power of your Wi-Fi</h1>
+  <div class="desc">2025-01-22</div>
+  <div class="panel"><content>
+
+<p class="wp-block-paragraph" id="tw-target-text"></p>
+
+
+
+<p class="wp-block-paragraph">By default almost all WiFi access points transmit at full power (100mW on 2.4GHz). This gives maximum coverage and users see a good signal (“full bars”). However, there are good reasons to turn down the transmit power to a fraction of the maximum.</p>
+
+
+
+<p class="wp-block-paragraph">It even makes sense to start with minimum power and increase it until the necessary area is covered.</p>
+
+
+
+<h4 class="wp-block-heading">0. Wi-Fi is about sharing, not competing</h4>
+
+
+
+<p class="wp-block-paragraph">In a congested environment it doesn’t matter if your access point is stronger than the neighbor’s. If your AP can receive other APs then it will share the air time with them by taking turns. All APs on the same channel will give other APs equal access to the spectrum. This is how 802.11 was written.<br>[Edit: I added this point as an afterthought, since this isn’t obvious to many users.]</p>
+
+
+
+<h4 class="wp-block-heading">1. Full power doesn’t increase coverage</h4>
+
+
+
+<p class="wp-block-paragraph">Mobile devices like phones and tablets have very limited batteries. To minimize power consumption their radios typically max at 15mW (12dBm), while access points max at 100mW (20dBm) on 2.4GHz and 200mW (23dBm) on 5GHz. However, WiFi connection is always bidirectional. It does no good if the client can receive the AP if the AP can’t receive the client. Have you ever been unable to connect – even though you appear to have good signal? This is the reason.</p>
+
+
+
+<p class="wp-block-paragraph">The bidirectional connection is symmetrical. It doesn’t matter if the AP has a better antenna or is located higher up. The antenna gain and any attenuation factors work symmetrically in both directions. So a good antenna and good location will improve the connection in both directions. Unilateral transmit power increase will only work in one direction.</p>
+
+
+
+<h4 class="wp-block-heading">2. Roaming</h4>
+
+
+
+<p class="wp-block-paragraph">In WiFi the client devices decide which access point they want to associate with and when to switch to next. (This is contrary to the mobile telephone network, where access points decide which one will serve which client.) Many devices are very reluctant to roam to another AP. They hold on to the first chosen one even when there is a much stronger AP next to the device. Only when the connection breaks will they associate with the next AP – and keep that connection to the end. This results in clients using far away access points with poor connections. By lowering the transmit power the connection will break sooner and the client will roam to a better access point.</p>
+
+
+
+<p class="wp-block-paragraph">This behaviour affects access point utilisation as well. In the worst scenario the access point by the entrance covers the entire office just barely. When users arrive their devices will associate with the entrance AP and keep using it for the rest of the day. The entrance AP is overloaded while other APs are idle.</p>
+
+
+
+<h4 class="wp-block-heading">3. Battery life</h4>
+
+
+
+<p class="wp-block-paragraph">The access point informs the clients what its transmit power is (802.11h TPC, 802.11k TPC or Cisco DTPC). Mobile devices will adjust their transmit power level to match to save battery. The logic is that if the mobile device can receive the AP at that power level, the same applies in reverse as the symmetry was explained earlier. By setting the AP transmit power to 5mW (7dBm) for example, you can increase the battery life of the clients. Such a weak signal won’t penetrate walls, so you need more access points – see the next section&nbsp;<em>Performance…</em></p>
+
+
+
+<h4 class="wp-block-heading">4. Performance</h4>
+
+
+
+<p class="wp-block-paragraph">Back then access points were expensive and they were placed far apart. Now the price is no longer an issue, but WiFi performance is. By adding more access points there will be less clients per AP, hence more bandwidth per client.</p>
+
+
+
+<p class="wp-block-paragraph">Keep in mind that wires are always more efficient than radio waves. The faster and closer you can move the data from radio to wires, the better. That’s why increasing the number of low-powered access points is the key to a high performance WiFi network. Why low-power? See the next section&nbsp;<em>Interference…</em></p>
+
+
+
+<h4 class="wp-block-heading">5. Interference</h4>
+
+
+
+<p class="wp-block-paragraph">A powerful signal will interfere with neighbouring devices even if they are on different channels (frequencies). At high signal levels the whole device will act as an antenna and induction will cause superfluous signals in the circuits. This is why you need to keep access points at least 10′ (3m) apart or have a thick concrete wall in-between, preferably both.</p>
+
+
+
+<p class="wp-block-paragraph">Access points can still interfere with each other, even if there is enough distance. The WiFi channels are not absolute. While the transmission is on a certain channel, the signal bleeds to the neighbouring channels as well, albeit weaker. At high transmit power this weak signal will be strong enough to interfere.</p>
+
+
+
+<h4 class="wp-block-heading">6. Distortion</h4>
+
+
+
+<p class="wp-block-paragraph">If you drive an amplifier at full power the output will distort. This is easy to test with a car radio: turn it on full blast and try to make sense of the lyrics. A distorted signal is hard to decode and in WiFi parlance this means transmission errors and retransmissions, which will slow down the network. You can increase performance by lowering the transmit power.</p>
+
+
+
+<h4 class="wp-block-heading">7. Neighbourliness</h4>
+
+
+
+<p class="wp-block-paragraph">A strong signal will cause interference in a large area. Even though the extra milliwatts won’t benefit you, they will consume limited air time and interfere with all other WiFi networks in the area (look back at point 0 at the beginning of the article).</p>
+
+
+
+<p class="wp-block-paragraph">Think about it security wise as well: Why should anyone across the street be able to receive your WiFi signal?</p>
+
+
+
+<h4 class="wp-block-heading">8. Longer lifetime</h4>
+
+
+
+<p class="wp-block-paragraph">Lower transmit power equals lower energy consumption equals less heat. Operating at lower temperature increases equipment lifetime. While access points are inexpensive, they tend to break at the most inconvenient time and place. You won’t notice the energy savings on your electricity bill, though.</p>
+
+
+
+<p class="wp-block-paragraph"><a rel="noreferrer noopener" target="_blank" href="http://www.linkedin.com/sharing/share-offsite/?url=https://metis.fi/en/2017/10/txpower/"></a></p>
+
+
+
+<p class="wp-block-paragraph">Original link:<a href="https://metis.fi/en/2017/10/txpower/">https://metis.fi/en/2017/10/txpower/</a></p>
+
+</content></div>
+ </article>
+</div>
+
+<footer>
+ <div class="wrap">
+  <div class="frow">
+   <div class="fcol">
+    <b>BITDSK LAB</b>
+    <p style="margin:6px 0 0">Archived from the original Bitdsk documentation site. Kept online so the guides stay reachable.</p>
+   </div>
+   <div class="links">
+    <a href="../index.html">Home</a>
+    <a href="../firmware.html">Firmware</a>
+    <a href="../flash.html">Flash tool</a>
+    <a href="index.html">All guides</a>
+   </div>
+  </div>
+  <div class="fine">Archived guide — content reproduced as published; some links point to external sites.</div>
+ </div>
+</footer>
+
+<button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>

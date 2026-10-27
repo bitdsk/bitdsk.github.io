@@ -1,0 +1,1310 @@
+{
+ "site": {
+  "name": "BITDSK LAB",
+  "tagline": "SHA256 miner firmware & documentation archive",
+  "generated": "2026-10-28",
+  "firmwareBase": ""
+ },
+ "stats": {
+  "files": 41,
+  "bytes": 51712639,
+  "size": "49.3 MB",
+  "models": 6
+ },
+ "models": [
+  {
+   "id": "n5-series",
+   "name": "N5 Series",
+   "title": "N5.Rex / N5.Rexi / D12 / D12-T",
+   "chips": [
+    "N5.Rex",
+    "N5.Rexi",
+    "D12",
+    "D12-T"
+   ],
+   "summary": "1.9\" colour-screen single-ASIC SHA256 miner. The main production line.",
+   "status": "active",
+   "statusText": "In production",
+   "family": "ASIC · SHA256",
+   "method": "ota",
+   "methodText": "Web UI (OTA)",
+   "docPage": "docs/fw-n5d12.html",
+   "specs": [
+    [
+     "Screen",
+     "1.9\" colour"
+    ],
+    [
+     "Hashrate",
+     "200G – 1T"
+    ],
+    [
+     "Power",
+     "≈8.9 – 24W"
+    ],
+    [
+     "Supply",
+     "DC 12V"
+    ]
+   ],
+   "releases": [
+    {
+     "version": "all_3.3",
+     "date": "2026-04-09",
+     "changes": [
+      "Fixed string issues",
+      "Added support for ckpool"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.3_sec.zip",
+       "bytes": 1478273,
+       "size": "1.4 MB",
+       "sha256": "1145f8a5238c94fd4af168abee12b3469f327af0c7d11e47d16d53ecdd251465",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.2",
+     "date": "2026-04-02",
+     "changes": [
+      "Modify the weather API to OpenWeather. If you are using weather services, you may need to reconfigure the weather API in your settings after the upgrade."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.2_sec.zip",
+       "bytes": 1477602,
+       "size": "1.4 MB",
+       "sha256": "c40f91912aee2ad91960c09588c5af2e3cd340f87964a8caf17250aa8632f296",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.1.6",
+     "date": "2025-12-23",
+     "changes": [
+      "Fixed the authentication method by moving the difficulty suggestion to after authentication, improving pool compatibility.",
+      "Fixed extranonce compatibility for 8-byte values, improving pool compatibility."
+     ],
+     "important": true,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.1.6_sec.zip",
+       "bytes": 1479924,
+       "size": "1.4 MB",
+       "sha256": "bb48d3d7cde65d93990be144be67e764c94d4a9244b2d63ee1da5f81ae1ba7f5",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.1.5",
+     "date": "2025-12-13",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.1.5_sec.zip",
+       "bytes": 1479801,
+       "size": "1.4 MB",
+       "sha256": "1d06eae319badd03d7dac66f0e1c619daed9600029c267c47b9396eeb733a4ae",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.1.4",
+     "date": "2025-11-07",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.1.4_sec.zip",
+       "bytes": 1479521,
+       "size": "1.4 MB",
+       "sha256": "fa9bd993776f0a37bca2938b9fdcf4ebacc90d62d9b8f75e8fff1ed08fbb28db",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.1.3",
+     "date": "2025-11-03",
+     "changes": [
+      "We've fixed a hidden bug that could cause firmware crashes and reboots."
+     ],
+     "important": true,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.1.3_sec.zip",
+       "bytes": 1479518,
+       "size": "1.4 MB",
+       "sha256": "e7bf2e2b9d873dd08408c3673e24a97886fce1b91d153e7f6cd73a62278e6ee3",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.1.2",
+     "date": "2025-11-01",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "all_3.1.1",
+     "date": "2025-10-31",
+     "changes": [
+      "Modify the logic of subscribe."
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "all_3.1.0",
+     "date": "2025-10-26",
+     "changes": [
+      "Support for D12-T",
+      "Fixed color screen rotation issues",
+      "Increased background display speed",
+      "Adjusted task priorities"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.1.0_sec.zip",
+       "bytes": 1479697,
+       "size": "1.4 MB",
+       "sha256": "a0ef13247b893000136467f80957dc40cc62dad0ed4a93dc08817ffa61f4832c",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.9_9",
+     "date": "2025-10-14",
+     "changes": [
+      "Fix wifi channel.To be compatible with more routers."
+     ],
+     "important": true,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.9_9_sec.zip",
+       "bytes": 1479087,
+       "size": "1.4 MB",
+       "sha256": "d530a769f4dfeff375dd0f6f95cefbdb620ea87bb6b8b8deb779bef6da591762",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.9_8",
+     "date": "2025-10-11",
+     "changes": [
+      "Socket Relink repairs"
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "all_3.0.9_6",
+     "date": "2025-09-02",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.9_6_sec.zip",
+       "bytes": 1478935,
+       "size": "1.4 MB",
+       "sha256": "4320f0ac895a98485fa5a80e7c0142f6c4644c2d333af871cd635847d6530b01",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.9_5",
+     "date": "2025-06-30",
+     "changes": [
+      "Fixed the issue that the AP hotspot cannot be started for the first time in version \"all_3.0.9_4\""
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.9_5_sec.zip",
+       "bytes": 1477682,
+       "size": "1.4 MB",
+       "sha256": "8d456f9cb4f193ef25841d0ba5a00f0937fec3786e9cbb1db08343d08958966d",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.9_4",
+     "date": "2025-06-29",
+     "changes": [
+      "Bug found"
+     ],
+     "important": false,
+     "status": "none",
+     "files": [],
+     "noteLink": "https://www.bitdsk.org/archives/984"
+    },
+    {
+     "version": "all_3.0.8_1",
+     "date": "2025-06-13",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_3.0.7",
+     "date": "2025-06-11",
+     "changes": [
+      "1: Fix the wifi 2.4G and 5G dual-band connection problem. 2: Cumulative repairs"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.7_sec.zip",
+       "bytes": 1472520,
+       "size": "1.4 MB",
+       "sha256": "68293fce283562851aecee87c62a9f0417bc82b40abb0415568d55067787722e",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.6",
+     "date": "2025-06-03",
+     "changes": [
+      "Improve the hash of N5. If the hash becomes unstable after upgrading, please reduce the running frequency first and then return to the previous version."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.6_sec.zip",
+       "bytes": 1472206,
+       "size": "1.4 MB",
+       "sha256": "857f78e0e6ea4f7b3dfbca3976796ad1d9bb7c0989d4602734ea5de958c878c9",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.5",
+     "date": "2025-05-28",
+     "changes": [
+      "Improve the hash of N5. If the hash becomes unstable after upgrading, please reduce the running frequency first and then return to the previous version."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.5_sec.zip",
+       "bytes": 1466009,
+       "size": "1.4 MB",
+       "sha256": "0840bd37d8e21e61a647e124398d36b6636f41618c27dd4816ede55a3a22180b",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.4_1",
+     "date": "2025-05-20",
+     "changes": [
+      "Adjust parameters"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/all.3.0.4_1_sec.zip",
+       "bytes": 1465928,
+       "size": "1.4 MB",
+       "sha256": "37f6341ff2a07f66a74199134cd5a1f3650da71d5c9810f3d95dbd9204d934bb",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_3.0.4",
+     "date": "2025-05-20",
+     "changes": [
+      "1: Fixed screen issues caused by manually resetting SDA/SCL lines during i2c initialization",
+      "2: Optimize dynamic job list"
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_3.0.3",
+     "date": "2025-05-19",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_3.0.2(beta)",
+     "date": "2025-05-14",
+     "changes": [
+      "1: Add support for Y7",
+      "2: Optimize internal mathematical calculation functions",
+      "3: Optimize socket stability",
+      "4: Add integrity judgment during OTA upgrade",
+      "5: Add adaptive interface and optimize comfort for small screens",
+      "6: Add kernel monitoring, watchdog will throw relevant information",
+      "7: Change creat Job to dynamic mode, which will automatically adjust the frequency",
+      "8: Change xTask to manual registration, so that task priority can be controlled more finely",
+      "This version is still beta, because many things have been modified and stability needs to be tested"
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_3.0.1(beta)",
+     "date": "2025-04-30",
+     "changes": [
+      "Cumulative updates"
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_3.0.0(beta)",
+     "date": "2025-04-15",
+     "changes": [
+      "New UI",
+      "At the same time, PC batch management tools were released.",
+      "Beta version, please upgrade with caution."
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_2.1.0",
+     "date": "2025-04-03",
+     "changes": [
+      "Bug fixes",
+      "*Fixed wdt restart caused by LED driver",
+      "*Fixed memory overflow caused by some pools",
+      "*Fixed watchdog may cause wdt restart",
+      "*Fixed reset 'null' problem after 'free' of some indicators"
+     ],
+     "important": true,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/alll.2.1.0_sec.zip",
+       "bytes": 1998407,
+       "size": "1.9 MB",
+       "sha256": "e8c251ed61159e01e6f03db1e3008a6de62629ff6179e235299dfb1c50940c7f",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "all_2.0.8",
+     "date": "2025-03-22",
+     "changes": [
+      "Cumulative updates"
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_2.0.7",
+     "date": "2025-02-11",
+     "changes": [
+      "Urgent update",
+      "Fixed the issue of version 2.0.6 not displaying the Hash."
+     ],
+     "important": true,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_2.0.6",
+     "date": "2025-02-04",
+     "changes": [
+      "Cumulative updates",
+      "Note: Re-modify the wifi power to 20dBm",
+      "Because: We found that some old hardware using 12dBm will cause poor signals. Moreover, when connected to the same wifi, if other high-traffic hardware also uses this wifi, the signal will be abnormal or even unable to connect."
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_2.0.5",
+     "date": "2025-01-24",
+     "changes": [
+      "1: WiFi power from 20dBm to 12dBm.",
+      "2: Merge www to miner. This is to solve the esp damage problem caused by power failure during upgrade. 2~3 versions of iterations are required.",
+      "3: Add tcp heartbeat packets.",
+      "4: Merge the same weather pictures, so that the firmware size can be controlled at around 4M.",
+      "5: Delete some font files to control the firmware size."
+     ],
+     "important": false,
+     "status": "abandoned",
+     "files": []
+    },
+    {
+     "version": "all_1.0.0(beta)",
+     "date": "2025-01-13",
+     "changes": [
+      "Merge N_ into D_. A rescue page is added to follow the firmware release. This page can directly rewrite the www partition to solve the damage to the www partition caused by unexpected power outage.",
+      "d series adds Flipscreen function"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n5-series/alll.1.0.0_sec.zip",
+       "bytes": 2077958,
+       "size": "2.0 MB",
+       "sha256": "2e78098a3a53fc8b4d48f3047326ebf28705a2cb70fc6b8f5d7ce2d1a7d13ba1",
+       "label": "Download"
+      }
+     ]
+    }
+   ],
+   "count": 16,
+   "latest": "all_3.3",
+   "latestDate": "2026-04-09"
+  },
+  {
+   "id": "n8-series",
+   "name": "N8 Series",
+   "title": "N8 / N8-T / N5.Rexi-T",
+   "chips": [
+    "N8",
+    "N8-T",
+    "N5.Rexi-T"
+   ],
+   "summary": "0.91\" monochrome mini miner — low power, pocket sized.",
+   "status": "active",
+   "statusText": "In production",
+   "family": "ASIC · SHA256",
+   "method": "ota",
+   "methodText": "Web UI (OTA)",
+   "docPage": "docs/fw-n8.html",
+   "specs": [
+    [
+     "Screen",
+     "0.91\" mono"
+    ],
+    [
+     "Hashrate",
+     "200G"
+    ],
+    [
+     "Power",
+     "≈8.9W"
+    ],
+    [
+     "Supply",
+     "Type-C 5V/3A"
+    ]
+   ],
+   "extraFiles": [
+    {
+     "path": "firmware/n8-series/blackbox/bitdsk-miner-c.1.3.7_blackbox.zip",
+     "bytes": 1000644,
+     "size": "977 KB",
+     "sha256": "5c124a0ae03153848e250c249e058adb4fef9d6404d9d59ec445510bc3ca8076",
+     "label": "BLACKBOX debug build (C_1.3.7)"
+    }
+   ],
+   "releases": [
+    {
+     "version": "C_1.4.0",
+     "date": "2026-04-09",
+     "changes": [
+      "Fixed string issues",
+      "Added support for ckpool"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n8-series/bitdsk-miner-c.1.4.0.zip",
+       "bytes": 1016392,
+       "size": "993 KB",
+       "sha256": "6ff71dc375d7bff80fb9a8a2a232af4dea6376002871e52e59f553a91a8bb26f",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "C_1.3.9",
+     "date": "2026-04-03",
+     "changes": [
+      "Fixed an issue where fan speed would overlay split-screen display."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n8-series/bitdsk-miner-c.1.3.9.zip",
+       "bytes": 1016329,
+       "size": "993 KB",
+       "sha256": "2f09ebce4c6587bbed9433fa3a7da9ad31c4f6deff93400448bf46987ce4898c",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "C_1.3.8",
+     "date": "2026-04-01",
+     "changes": [
+      "Fixed the issue of spaces in the Wi-Fi display.",
+      "Corrected a spelling error on a webpage.",
+      "Fixed the issue of abnormal display of the 4-line fan speed.",
+      "(Important) Modified the hashrate calculation method; the hashrate will be more stable."
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.3.7",
+     "date": "2025-12-23",
+     "changes": [
+      "Fixed the authentication method by moving the difficulty suggestion to after authentication, improving pool compatibility.",
+      "Fixed extranonce compatibility for 8-byte values, improving pool compatibility."
+     ],
+     "important": true,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/n8-series/bitdsk-miner-c.1.3.7.zip",
+       "bytes": 1000652,
+       "size": "977 KB",
+       "sha256": "c8c9c532da42694dea1b3fbf0d7406fdc4aaadc2ba70b2e9d85b4803f1e383d7",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "C_1.3.6",
+     "date": "2025-12-13",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.3.5",
+     "date": "2025-11-07",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.3.4",
+     "date": "2025-11-03",
+     "changes": [
+      "We've fixed a hidden bug that could cause firmware crashes and reboots."
+     ],
+     "important": true,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.3.3",
+     "date": "2025-11-01",
+     "changes": [
+      "Cumulative repairs"
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.3.2",
+     "date": "2025-10-31",
+     "changes": [
+      "Modify the logic of subscribe."
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.3.1",
+     "date": "2025-10-19",
+     "changes": [
+      "Adjust the HTTP server's transmission mode to block transmission to speed up background management. Adjust the background task priority."
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.2",
+     "date": "2025-10-14",
+     "changes": [
+      "Fix wifi channel.To be compatible with more routers."
+     ],
+     "important": true,
+     "status": "withdrawn",
+     "files": []
+    },
+    {
+     "version": "C_1.1",
+     "date": "2025-10-11",
+     "changes": [
+      "Socket Relink repairs"
+     ],
+     "important": false,
+     "status": "withdrawn",
+     "files": []
+    }
+   ],
+   "count": 4,
+   "latest": "C_1.4.0",
+   "latestDate": "2026-04-09"
+  },
+  {
+   "id": "u-series",
+   "name": "U Series",
+   "title": "U1 Touch / U2 Touch",
+   "chips": [
+    "U1 Touch",
+    "U2 Touch"
+   ],
+   "summary": "2.8\" touchscreen models. Flash images live in the separate Flash Tool repository; the OTA image and UI themes are hosted here.",
+   "status": "active",
+   "statusText": "In production",
+   "family": "ASIC · SHA256",
+   "method": "flash",
+   "methodText": "Browser flash (USB)",
+   "flashPage": "#u-series",
+   "flashExternal": true,
+   "latestVersion": "v_1.5.2",
+   "docPage": "docs/fw-u1u2.html",
+   "specs": [
+    [
+     "Screen",
+     "2.8\" touch"
+    ],
+    [
+     "Hashrate",
+     "U1 200G · U2 1100–1500G"
+    ],
+    [
+     "Power",
+     "≈22W · ≈27W"
+    ],
+    [
+     "Supply",
+     "DC / Type-C"
+    ]
+   ],
+   "extraFiles": [
+    {
+     "path": "firmware/u-series/ota/v_1.5.2/bitdsk-miner.bin",
+     "bytes": 3529856,
+     "size": "3.4 MB",
+     "sha256": "8bebe63005caea385ba40afa3aa90cd276d50020aaac5366d2a07a99f899a4ed",
+     "label": "U1/U2 single image (OTA)"
+    },
+    {
+     "path": "firmware/u-series/themes/Bit_Horizon_bg.bin",
+     "bytes": 153600,
+     "size": "150 KB",
+     "sha256": "c04ba83f378802fca71f8480c1738ebf572e54a662b2b287d82b34375603122b",
+     "label": "UI background — Bit Horizon"
+    },
+    {
+     "path": "firmware/u-series/themes/VioletPulse_bg.bin",
+     "bytes": 153600,
+     "size": "150 KB",
+     "sha256": "d1b42537280d376c1bbe565c2ce34fb2260c23fe27a38cb9e2e3860e92caf2c5",
+     "label": "UI background — VioletPulse"
+    }
+   ],
+   "releases": [],
+   "flashers": [],
+   "count": 3,
+   "latest": "v_1.5.2",
+   "latestDate": null
+  },
+  {
+   "id": "s1",
+   "name": "S1",
+   "title": "S1 (ESP32-CYD 2432S028)",
+   "chips": [
+    "S1"
+   ],
+   "summary": "Display-only terminal with no ASIC, running on the generic ESP32-2432S028 board. The full flash image lives in the Flash Tool repository.",
+   "status": "active",
+   "statusText": "In production",
+   "family": "ESP32 · 无 ASIC",
+   "method": "flash",
+   "methodText": "Browser flash (USB)",
+   "flashPage": "#s1",
+   "flashExternal": true,
+   "latestVersion": "v_1.5",
+   "docPage": "docs/fw-s1.html",
+   "specs": [
+    [
+     "MCU",
+     "ESP32 dual-core"
+    ],
+    [
+     "Screen",
+     "2.8\" touch"
+    ],
+    [
+     "Hashrate",
+     "600k – 800k H/s"
+    ],
+    [
+     "Supply",
+     "USB 5V"
+    ]
+   ],
+   "releases": [],
+   "flashers": [],
+   "count": 0,
+   "latest": "v_1.5",
+   "latestDate": null
+  },
+  {
+   "id": "legacy",
+   "name": "Legacy",
+   "title": "Discontinued / legacy boards",
+   "chips": [
+    "N5.lite",
+    "N5.chi",
+    "Q2",
+    "H0",
+    "Y5",
+    "M0",
+    "D9",
+    "D10",
+    "D11",
+    "D13",
+    "Y7"
+   ],
+   "summary": "Archived firmware for discontinued boards, kept in the original N-series, D-series and early-N5 tables.",
+   "status": "legacy",
+   "statusText": "Discontinued",
+   "family": "ASIC · archive",
+   "method": "ota",
+   "methodText": "Web UI (OTA)",
+   "docPage": "docs/fw-other.html",
+   "specs": [
+    [
+     "N series",
+     "N5.lite / N5.chi / Q2 / H0 / Y5 / M0"
+    ],
+    [
+     "D series",
+     "D9 / D10 / D11 / D13 / Y7"
+    ],
+    [
+     "Status",
+     "Out of production — archive only"
+    ]
+   ],
+   "releases": [
+    {
+     "version": "D_0.4.16",
+     "date": "2025-01-08",
+     "changes": [
+      "No WWW.bin",
+      "Cumulative Update"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/d_update/D0.4.16_SEC.zip",
+       "bytes": 1391624,
+       "size": "1.3 MB",
+       "sha256": "604aa690584e1a51cc522f5eebb3def64bfbdba0101fbeed40b2bb04e1067904",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "N_6.0.1.1",
+     "date": "2024-12-16",
+     "changes": [
+      "Cumulative Update"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/n_update/N6.0.1.1_SEC.zip",
+       "bytes": 1280340,
+       "size": "1.2 MB",
+       "sha256": "695aa6c8f1c5274901b9022b32c43e8b4a1b56cb5ee8ffabb78d5f2ce1b25e51",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "N_6.0.1.0",
+     "date": "2024-12-14",
+     "changes": [
+      "Fixed the system crash caused by repeatedly deleting the task list when watchdog restarts wifi.",
+      "Delete the smooth curve of the chart and the computing power will be displayed intuitively. The disadvantage is that you will see larger fluctuations in the computing power graph."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/n_update/N6.0.1.0_SEC.zip",
+       "bytes": 1285330,
+       "size": "1.2 MB",
+       "sha256": "269d089bac13a35e179a4f0d0a74de88214c6bd35cc555d0308e619c39f1e208",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "D_0.4.14",
+     "date": "2024-12-14",
+     "changes": [
+      "Fixed the system crash caused by repeatedly deleting the task list when watchdog restarts wifi.",
+      "Delete the smooth curve of the chart and the computing power will be displayed intuitively. The disadvantage is that you will see larger fluctuations in the computing power graph."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/d_update/D0.4.14_SEC.zip",
+       "bytes": 2068473,
+       "size": "2.0 MB",
+       "sha256": "608a4d0b229443141bf9bb86525ebf67f9d1559408c88035f32c9d0f16d8e940",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "N_6.0.0.9",
+     "date": "2024-12-09",
+     "changes": [
+      "Try adding rollback code, we want the firmware to roll back when the update fails due to an unexpected power outage. Under normal circumstances, data rollback of failed upgrades can be achieved after 2-3 firmware iterations."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/n_www/N_www_2024.12.09.zip",
+       "bytes": 675355,
+       "size": "660 KB",
+       "sha256": "633bfee82bb4b32895eb46d5d99945026db9e0188fd501e5c98c339bf9ebbe44",
+       "label": "www partition"
+      },
+      {
+       "path": "firmware/legacy/n_miner/N_miner_6.0.0.9.zip",
+       "bytes": 609564,
+       "size": "595 KB",
+       "sha256": "1feafb52960834c21281295b8fefef4c98d2b30cebeb3ea8921f897599da09e0",
+       "label": "miner partition"
+      }
+     ]
+    },
+    {
+     "version": "D_0.4.13",
+     "date": "2024-12-09",
+     "changes": [
+      "Try adding rollback code, we want the firmware to roll back when the update fails due to an unexpected power outage. Under normal circumstances, data rollback of failed upgrades can be achieved after 2-3 firmware iterations."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/d_www/d_2024.12.09_www.zip",
+       "bytes": 676871,
+       "size": "661 KB",
+       "sha256": "0c909859745d492fd532bd7d9ab03aaf0405d7d92e4e5a85338d2170d85f9365",
+       "label": "www partition"
+      },
+      {
+       "path": "firmware/legacy/d_miner/d_0.4.13_miner.zip",
+       "bytes": 1391601,
+       "size": "1.3 MB",
+       "sha256": "9b0ff00cd12bdd0253b9259d931c3b6145bd7aea9f744668d3bacd934ae5138e",
+       "label": "miner partition"
+      }
+     ]
+    },
+    {
+     "version": "D0.4.12",
+     "date": "2024-12-09",
+     "changes": [
+      "Fixed an issue where filling in the weather key incorrectly would lead to infinite restarts"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/d9/D0.4.12_SEC.zip",
+       "bytes": 2066987,
+       "size": "2.0 MB",
+       "sha256": "c1371d3fb61cd694c70314b751f93ff66fd5fddcc2c7b611a574884ef8197aec",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "N6.0.0.8",
+     "date": "2024-12-07",
+     "changes": [
+      "Starts more smoothly",
+      "Modify the 1370 task time interval"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "D0.4.11",
+     "date": "2024-12-07",
+     "changes": [
+      "Starts more smoothly",
+      "Modify the 1370 task time interval",
+      "Fix weather display picture"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "D0.4.9",
+     "date": "2024-11-30",
+     "changes": [
+      "fixed issue where coin price arrows were incorrect."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/d9/D0.4.9_SEC.zip",
+       "bytes": 2045363,
+       "size": "2.0 MB",
+       "sha256": "7e995c9d26136d951b4ef58f177b46d1705d1295c2412815186a5d37ccf85f07",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "N6.0.0.7",
+     "date": "2024-11-29",
+     "changes": [
+      "The internal spindle size has been adjusted to effectively solve the packet loss problem."
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "D0.4.8",
+     "date": "2024-11-29",
+     "changes": [
+      "Add New weather API.",
+      "The internal spindle size has been adjusted to effectively solve the packet loss problem.",
+      "After updating, please reset the weather interface and save it."
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "N6.0.0.6",
+     "date": "2024-11-15",
+     "changes": [
+      "Fix memory leak"
+     ],
+     "important": true,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "D0.4.7",
+     "date": "2024-11-15",
+     "changes": [
+      "Fix memory leak"
+     ],
+     "important": true,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/d9/D0.4.7_SEC.zip",
+       "bytes": 1695771,
+       "size": "1.6 MB",
+       "sha256": "9128b2439f4bf9f9b95791a3a17e6703965944d164ddaa8b7643c838e40e7dcd",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "N6.0.0.5",
+     "date": "2024-11-12",
+     "changes": [
+      "Added multi-chip support"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "D0.4.6",
+     "date": "2024-11-12",
+     "changes": [
+      "Added multi-chip support  and fix Bug"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "N6.0.0.3",
+     "date": "2024-10-20",
+     "changes": [
+      "N6 Cumulative Update"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "D0.4.5",
+     "date": "2024-10-20",
+     "changes": [
+      "Add Coin Price"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "N5_0.4.7",
+     "date": "2024-10-20",
+     "changes": [
+      "Cumulative Update"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/n5/new/N5_0.4.7_watchdog.zip",
+       "bytes": 1267674,
+       "size": "1.2 MB",
+       "sha256": "f2a5f0cf6ec82cda042c8d19da4cb9058ea2c3393d013681dcfc24634571aa3e",
+       "label": "Watchdog build"
+      },
+      {
+       "path": "firmware/legacy/n5/new/N5_0.4.7_watchdog_SEC.zip",
+       "bytes": 1268221,
+       "size": "1.2 MB",
+       "sha256": "9bb77dc5906bcedfb17f44ec721244c1ef696062efab30ad6aee70bf629dfb32",
+       "label": "Watchdog SEC build"
+      }
+     ]
+    },
+    {
+     "version": "D0.4.4",
+     "date": "2024-10-12",
+     "changes": [
+      "Fix 1 memory bug, fix DNS related issues, corresponding version: D9"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    },
+    {
+     "version": "Nowatchdog_update 0.4.0",
+     "date": "2024-09-10",
+     "changes": [
+      "Full series version update",
+      "1: Rewrite the watchdog judgment mechanism (watchdog version)",
+      "2: Optimize and repair automatic disconnection and reconnection",
+      "3: Modify the WiFi connection logic from 5 connections to unlimited reconnections",
+      "4: Modify the boot screen display",
+      "5: Add socket disconnection detection and automatically reconnect sockets",
+      "6: Modify the packet loss judgment logic in weak network environments",
+      "7: Fix difficulty adjustment, remove outdated task queue logic, and adjust response sensitivity to 10 milliseconds",
+      "8: Modify the event_mandler event logic",
+      "9: Modify partition table size (for new machines)",
+      "10: Modify SPI memory operation mode",
+      "11: Fix the white bar issue below the large screen",
+      "12: Fixed abnormal memory usage issue for some models (nowatchdog version)"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/legacy/n5/new/update_0.4.0_nowatchdog_final.zip",
+       "bytes": 1268429,
+       "size": "1.2 MB",
+       "sha256": "155db101802fd3dc9056ee1888f410eafc34ef33b1fe526e78172eb6c09ae0e2",
+       "label": "Watchdog build"
+      }
+     ]
+    },
+    {
+     "version": "update 0.3.1 watchdog_sec",
+     "date": "2024-09-06",
+     "changes": [
+      "Optimize the strategy task, corresponding version: watchdog_sec"
+     ],
+     "important": false,
+     "status": "expired",
+     "files": []
+    }
+   ],
+   "count": 14,
+   "latest": "D_0.4.16",
+   "latestDate": "2025-01-08"
+  },
+  {
+   "id": "tools",
+   "name": "PC Tools",
+   "title": "PC batch manager",
+   "chips": [
+    "Windows"
+   ],
+   "summary": "Windows batch manager for monitoring and upgrading several miners at once.",
+   "status": "tool",
+   "statusText": "Tool",
+   "family": "Windows tool",
+   "method": "download",
+   "methodText": "Direct download",
+   "docPage": "docs/miner-tools.html",
+   "specs": [
+    [
+     "Platform",
+     "Windows"
+    ],
+    [
+     "Purpose",
+     "Batch manage / batch upgrade"
+    ],
+    [
+     "Requires",
+     "Miner firmware ≥ all_3.0.0"
+    ]
+   ],
+   "fileLabel": "Download",
+   "releases": [
+    {
+     "version": "1.0.2",
+     "date": "2025-11-06",
+     "changes": [
+      "Resource localization. Adapts to special environments where the management machine has no network."
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/tools/bitdsk_manager1.0.2.zip",
+       "bytes": 85124,
+       "size": "83 KB",
+       "sha256": "7bdfea74edb31582bf7d9037e9337f67929250826fb957ee009a7a62dc10521f",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "1.0.1",
+     "date": "2025-04-30",
+     "changes": [
+      "Miner Version >= all_3.0.0"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/tools/bitdsk_manager1.0.1.zip",
+       "bytes": 3114,
+       "size": "3 KB",
+       "sha256": "6233c9ddc4a789ed9dca6217203e28aec3b89994a9abf08c7ffa04f5fc9f7b8e",
+       "label": "Download"
+      }
+     ]
+    },
+    {
+     "version": "1.0.0",
+     "date": "2025-04-15",
+     "changes": [
+      "Miner Version >= all_3.0.0"
+     ],
+     "important": false,
+     "status": "available",
+     "files": [
+      {
+       "path": "firmware/tools/bitdsk_manager1.0.0.zip",
+       "bytes": 2854,
+       "size": "3 KB",
+       "sha256": "75ada53bc77f96b358be5313edb02d3cedd2bd97564c917b26201723d38a9425",
+       "label": "Download"
+      }
+     ]
+    }
+   ],
+   "count": 3,
+   "latest": "1.0.2",
+   "latestDate": "2025-11-06"
+  }
+ ],
+ "extras": [
+  {
+   "name": "Gerber_wancha.zip",
+   "label": "PCB Gerber files",
+   "path": "firmware/hardware/Gerber_wancha.zip",
+   "size": "15 KB",
+   "bytes": 15803,
+   "sha256": "1809dd3b1f58da91694f7fde1ade691cf26eb603caa9e63433814d16ab8bc5b5"
+  }
+ ]
+}

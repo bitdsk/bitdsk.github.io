@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firmware Archive — BITDSK LAB</title>
+<meta name="description" content="Every Bitdsk firmware release, grouped by model: N5 series, N8 series, U series, S1, legacy boards and PC tools. Direct download with sizes and SHA256.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="sitebar">
+ <div class="wrap row">
+  <a class="brand" href="index.html">
+   <img class="brand-logo" src="images/logo.png" srcset="images/logo@2x.png 2x" alt="Bitdsk" width="118" height="30">
+   <span class="bname">LAB <span>Docs</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="index.html">Home</a>
+   <a href="firmware.html" class="active">Firmware</a>
+   <a href="flash.html">Flash</a>
+   <a href="docs/docs.html">Docs</a>
+   <a href="docs/api.html">API</a>
+   <a href="docs/version-comparison.html">Versions</a>
+   <a href="guides/index.html">Guides</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu">&#9776;</button>
+ </div>
+</div>
+
+<div class="hero compact">
+ <div class="glow-orb" style="width:360px;height:360px;right:-60px;top:-120px;background:radial-gradient(circle,var(--accent-2),transparent 65%)"></div>
+ <div class="wrap">
+  <span class="badge"><span class="dot"></span>Firmware archive</span>
+  <h1>All <span class="grad">Bitdsk firmware</span>, by model</h1>
+  <p class="lead">Pick the group that matches your board. Binaries are served from the <b>Bitdsk_Miner_Archive</b> repository; sizes and SHA256 checksums are listed here so you can verify what you downloaded.</p>
+ </div>
+</div>
+
+<div data-firmware-page>
+ <div class="toolbar">
+  <div class="wrap inner">
+   <div class="chips" id="modelTabs"></div>
+   <div class="searchbox">
+    <span class="ic">&#9906;</span>
+    <input type="text" id="fwq" placeholder="Search version, fix or changelog text…" autocomplete="off">
+   </div>
+  </div>
+ </div>
+
+ <div class="wrap">
+  <div class="notice info" style="margin:22px 0 0">
+   <b>Files live in a separate repository.</b> All binaries are downloaded from
+   <a href="https://github.com/bitdsk/Bitdsk_Miner_Archive" target="_blank" rel="noopener" style="color:var(--accent)">Bitdsk_Miner_Archive</a>
+   on GitHub. This page is the index &mdash; sizes and SHA256 are listed for every file.
+  </div>
+  <div class="notice" style="margin:12px 0 18px">
+   <b>Version dates are approximate.</b> This archive was migrated from the original WordPress site.
+   Version numbers are accurate, but the dates shown next to them come from the old download tables
+   and may be off by a few days.
+  </div>
+
+  <div class="fw-meta" id="fwmeta">Loading…</div>
+  <div id="fwSections"><div class="skeleton">Loading firmware index…</div></div>
+  <div class="empty" id="fwEmpty" style="display:none">
+   No entry matches that search. Try a version number like <code>all_3.3</code>, or a keyword such as <code>ckpool</code>.
+  </div>
+
+  <div class="notice info" style="margin-top:34px">
+   <b>Which file do I need?</b><br>
+   Most upgrades are the single <code>.zip</code> — upload it in the miner web UI under <b>Settings &rarr; Firmware</b>, and your settings and CD KEY are kept.
+   Rows marked <span class="pill dead">Abandoned</span> or <span class="pill dead">Expired</span> are kept for reference only — do not flash them.
+   For a board that will not boot, use the <a href="flash.html" style="color:var(--accent)">browser flash tool</a> instead.
+  </div>
+ </div>
+</div>
+
+<footer>
+ <div class="wrap">
+  <div class="frow">
+   <div class="fcol">
+    <b>BITDSK LAB</b>
+    <p style="margin:6px 0 0">Index of the Bitdsk firmware archive. Binaries are served from the Bitdsk_Miner_Archive repository on GitHub.</p>
+   </div>
+   <div class="links">
+    <a href="index.html">Home</a>
+    <a href="flash.html">Flash tool</a>
+    <a href="docs/docs.html">Docs</a>
+    <a href="docs/api.html">API</a>
+    <a href="docs/version-comparison.html">Versions</a>
+   </div>
+  </div>
+  <div class="fine">Data generated <span data-generated>—</span>. Always back up your CD KEY before flashing.</div>
+ </div>
+</footer>
+
+<button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

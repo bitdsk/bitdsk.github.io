@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to use redir for mining pool forwarding?no pumping — BITDSK LAB</title>
+<meta name="description" content="We will use an example as an illustration. For example, the mining pool that needs to be connected is: stratum+tcp://public-pool.io:21496 Among them, ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="sitebar">
+ <div class="wrap row">
+  <a class="brand" href="../index.html">
+   <img class="brand-logo" src="../images/logo.png" srcset="../images/logo@2x.png 2x" alt="Bitdsk" width="118" height="30">
+   <span class="bname">LAB <span>Docs</span></span>
+  </a>
+  <nav class="nav" id="nav">
+   <a href="../index.html">Home</a>
+   <a href="../firmware.html">Firmware</a>
+   <a href="../flash.html">Flash</a>
+   <a href="../docs/docs.html">Docs</a>
+   <a href="../docs/api.html">API</a>
+   <a href="../docs/version-comparison.html">Versions</a>
+   <a href="index.html">Guides</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu">&#9776;</button>
+ </div>
+</div>
+
+<div class="wrap docpage">
+ <div class="crumb"><a href="../index.html">Home</a> &rsaquo; <a href="index.html">Guides</a> &rsaquo; <span>How to use redir for mining pool forwarding?no pumping</span></div>
+ <article class="doc">
+  <h1>How to use redir for mining pool forwarding?no pumping</h1>
+  <div class="desc">2025-01-26</div>
+  <div class="panel"><content>
+
+<p class="wp-block-paragraph">We will use an example as an illustration. For example, the mining pool that needs to be connected is: stratum+tcp://public-pool.io:21496</p>
+
+
+
+<p class="wp-block-paragraph">Among them, stratum+tcp:// represents the protocol, and there is also a more popular stratum+ssl://. Currently bitdsk only supports the former, which is tcp.</p>
+
+
+
+<p class="wp-block-paragraph">public-pool.io represents the mining pool server address that needs to be connected</p>
+
+
+
+<p class="wp-block-paragraph">21496 represents the connected port.</p>
+
+
+
+<p class="wp-block-paragraph">The corresponding background configuration is filled in like this:</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="465" height="233" src="../images/wp-content/uploads/2025/01/2025-01-26_02-13.jpg" alt="" class="wp-image-592" /></figure>
+
+
+
+<p class="wp-block-paragraph">The following explains how to forward</p>
+
+
+
+<p class="wp-block-paragraph">1: You need to purchase a cloud server, preferably one from abroad that can be accessed normally. Recommend a URL where you can find these resources: Google search: vpser<br>Note: You need some knowledge to ensure that you can manage and run this cloud server</p>
+
+
+
+<p class="wp-block-paragraph"><br>2: Use ssh software to log in to the cloud server and run the command to update the system (here, the ubuntu/debian system is taken as an example)<br></p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="sudo apt-get update" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">sudo apt</span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF">get update</span></span></code></pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="708" height="333" src="../images/wp-content/uploads/2025/01/image-1.png" alt="" class="wp-image-593" /></figure>
+
+
+
+<p class="wp-block-paragraph">3: Install redir after the update is complete</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="sudo apt-get install redir" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">sudo apt</span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF">get install redir</span></span></code></pre></div>
+
+
+
+<p class="wp-block-paragraph">4: Configure redir after installation is complete</p>
+
+
+
+<p class="wp-block-paragraph">Command: sudo redir:</p>
+
+
+
+<p class="wp-block-paragraph">eg：</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="sudo redir :2345 public-pool.io:21496" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">sudo redir </span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">2345</span><span style="color: #D8DEE9FF"> public</span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF">pool</span><span style="color: #ECEFF4">.</span><span style="color: #D8DEE9FF">io</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">21496</span></span></code></pre></div>
+
+
+
+<p class="wp-block-paragraph">note: colons and spaces are all in English format</p>
+
+
+
+<p class="wp-block-paragraph">5: Modify the bitdsk background mining pool configuration. For example, the IP address of the cloud server I purchased is: 123.123.123.123</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="465" height="187" src="../images/wp-content/uploads/2025/01/image-2.png" alt="" class="wp-image-594" /></figure>
+
+
+
+<p class="wp-block-paragraph">6: Save and restart bitdsk</p>
+
+</content></div>
+ </article>
+</div>
+
+<footer>
+ <div class="wrap">
+  <div class="frow">
+   <div class="fcol">
+    <b>BITDSK LAB</b>
+    <p style="margin:6px 0 0">Archived from the original Bitdsk documentation site. Kept online so the guides stay reachable.</p>
+   </div>
+   <div class="links">
+    <a href="../index.html">Home</a>
+    <a href="../firmware.html">Firmware</a>
+    <a href="../flash.html">Flash tool</a>
+    <a href="index.html">All guides</a>
+   </div>
+  </div>
+  <div class="fine">Archived guide — content reproduced as published; some links point to external sites.</div>
+ </div>
+</footer>
+
+<button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+</body>
+</html>
