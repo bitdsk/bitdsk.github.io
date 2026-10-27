@@ -295,38 +295,23 @@ footer .fine{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);f
 /* 烧录卡描述长短不一，让描述撑开剩余空间，按钮才能底部对齐 */
 .flash-card > p{flex:1 1 auto}
 
-/* ---------- Discover：扫码区块 ---------- */
-.qr-panel{
-  display:flex;align-items:center;justify-content:space-between;gap:40px;
-  padding:34px 38px;border:1px solid var(--line);border-radius:var(--radius);
-  background:linear-gradient(135deg,var(--card),var(--bg-2));
-  position:relative;overflow:hidden;
+/* ---------- Discover：右下角 Discord 悬浮入口 ---------- */
+.discord-fab{
+  position:fixed;right:22px;bottom:78px;width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;background:#5865f2;color:#fff;z-index:40;
+  box-shadow:0 8px 24px rgba(88,101,242,.38);
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
 }
-.qr-panel::before{
-  content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;
-  background:radial-gradient(circle,var(--accent-glow),transparent 68%);pointer-events:none;
+.discord-fab:hover{background:#4752c4;transform:translateY(-2px);box-shadow:0 12px 30px rgba(88,101,242,.55)}
+.discord-fab svg{display:block}
+.dfab-tip{
+  position:absolute;right:56px;top:50%;transform:translate(6px,-50%);
+  white-space:nowrap;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:600;
+  background:var(--card);border:1px solid var(--line-2);color:var(--text);
+  opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;
 }
-.qr-text{position:relative;max-width:560px}
-.qr-text h2{margin:6px 0 10px;font-size:26px;letter-spacing:-.02em}
-.qr-text p{color:var(--muted);font-size:15px;margin:0}
-.qr-url{
-  display:inline-flex;align-items:center;gap:8px;margin-top:16px;
-  font-family:var(--mono);font-size:14px;color:var(--accent);
-  padding:7px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--bg-2);
-  max-width:100%;
-}
-a.qr-url{text-decoration:none;transition:border-color .18s ease,background .18s ease}
-a.qr-url:hover{border-color:var(--accent);background:rgba(91,140,255,.1)}
-.qr-code{
-  position:relative;flex:0 0 auto;text-align:center;
-  padding:12px;border-radius:14px;background:#fff;
-  box-shadow:0 10px 34px rgba(0,0,0,.45);
-}
-.qr-code img{display:block;width:190px;height:190px;border-radius:4px}
-.qr-code span{display:block;margin-top:9px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#5a6577;font-weight:700}
+.discord-fab:hover .dfab-tip{opacity:1;transform:translate(0,-50%)}
 @media (max-width:760px){
-  .qr-panel{flex-direction:column;text-align:center;gap:26px;padding:28px 22px}
-  .qr-text{max-width:none}
-  .qr-url{font-size:11.5px;padding:7px 11px;letter-spacing:-.01em}
-  .qr-code img{width:160px;height:160px}
+  .discord-fab{right:16px;bottom:74px;width:42px;height:42px}
+  .dfab-tip{display:none}
 }

@@ -49,6 +49,24 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.send_header('Cache-Control', 'no-store')
         super().end_headers()
 
+    def send_error(self, code, message=None, explain=None):
+        """404 时返回仓库根目录的 404.html，跟 GitHub Pages 行为一致。
+        这样 404 里的旧网址跳转表在本地也能测。"""
+        if code == 404:
+            try:
+                with open(os.path.join(ROOT, '404.html'), 'rb') as f:
+                    body = f.read()
+            except OSError:
+                return super().send_error(code, message, explain)
+            self.send_response(404)
+            self.send_header('Content-Type', 'text/html; charset=utf-8')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            if self.command != 'HEAD':
+                self.wfile.write(body)
+            return
+        return super().send_error(code, message, explain)
+
     def log_message(self, fmt, *args):
         pass          # 安静模式
 
