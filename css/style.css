@@ -313,7 +313,10 @@ footer .fine{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);f
   display:inline-flex;align-items:center;gap:8px;margin-top:16px;
   font-family:var(--mono);font-size:14px;color:var(--accent);
   padding:7px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--bg-2);
+  max-width:100%;
 }
+a.qr-url{text-decoration:none;transition:border-color .18s ease,background .18s ease}
+a.qr-url:hover{border-color:var(--accent);background:rgba(91,140,255,.1)}
 .qr-code{
   position:relative;flex:0 0 auto;text-align:center;
   padding:12px;border-radius:14px;background:#fff;
@@ -324,6 +327,6 @@ footer .fine{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);f
 @media (max-width:760px){
   .qr-panel{flex-direction:column;text-align:center;gap:26px;padding:28px 22px}
   .qr-text{max-width:none}
-  .qr-url{font-size:13px}
+  .qr-url{font-size:11.5px;padding:7px 11px;letter-spacing:-.01em}
   .qr-code img{width:160px;height:160px}
 }
