@@ -1,0 +1,19 @@
+# 维护笔记：只留本地，不进仓库（用户只应看到英文 README.md）
+DEVELOPMENT.md
+
+# 自定义域名配置：切域名时把 scripts/CNAME.for-domain 复制回根目录改名为 CNAME
+scripts/CNAME.for-domain
+
+# 系统 / 编辑器杂项
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# 本地预览与临时产物
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
