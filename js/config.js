@@ -16,14 +16,15 @@ window.BITDSK_CONFIG = {
   /* 数据清单位置 */
   dataUrl: 'data/firmware.json',
 
-  /* 烧录站地址（独立的 bitdsk-flash 仓库）。
+  /* 烧录站地址（独立仓库 bitdsk/Bitdsk-Flash_For_U1U2）。
      S1 / U1 / U2 的烧录包与浏览器烧录页都在那边，本站只保留索引条目。
      本站是 bitdsk.org 根域名，烧录站是 github.io 的子路径，属于跨域，
-     所以这里必须用绝对地址。留空则相关按钮自动隐藏，不会产生死链。 */
-  flashBase: 'https://bitdsk.github.io/bitdsk-flash/',
+     所以这里必须用绝对地址。留空则相关按钮自动隐藏，不会产生死链。
+     注意仓库名带大小写和下划线，URL 路径区分大小写。 */
+  flashBase: 'https://bitdsk.github.io/Bitdsk-Flash_For_U1U2/',
 
   /* 仓库与联系入口，页脚和导航用 */
   github: 'https://github.com/',
-  repoName: 'bitdsk-site',
+  repoName: 'bitdsk.github.io',
   email: ''
 };

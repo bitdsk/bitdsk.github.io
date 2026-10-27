@@ -1,10 +1,12 @@
 # Bitdsk firmware & documentation
 
-Static firmware archive and documentation site for Bitdsk miners.
+Firmware archive and documentation site for Bitdsk miners.
 
-This is the replacement for the old WordPress site at [bitdsk.org](https://bitdsk.org). It is a plain
-static site — no backend, no database — served from GitHub Pages. Everything here is a resource index:
-firmware downloads, user manuals, operating guides and the browser flash tool.
+This site replaces the old WordPress installation at [bitdsk.org](https://bitdsk.org). That
+installation is being retired: firmware, manuals, guides and the flash tool have all been migrated
+here, so nothing depends on the old host any more. It is a plain static site — no backend, no
+database — served from GitHub Pages. Everything here is a resource index: firmware downloads, user
+manuals, operating guides and the browser flash tool.
 
 ---
 
@@ -60,7 +62,7 @@ The site is split across repositories so that binaries and page content can be u
 |---|---|
 | [bitdsk.github.io](https://github.com/bitdsk/bitdsk.github.io) | This site: index pages, docs, guides, PDF manuals |
 | [Bitdsk_Miner_Archive](https://github.com/bitdsk/Bitdsk_Miner_Archive) | All firmware binaries (OTA zips, legacy builds, PC tools, Gerber files) |
-| [bitdsk-flash](https://github.com/bitdsk/bitdsk-flash) | Browser flash tool and the S1 / U1 / U2 flash images |
+| [Bitdsk-Flash_For_U1U2](https://github.com/bitdsk/Bitdsk-Flash_For_U1U2) | Browser flash tool and the S1 / U1 / U2 flash images |
 | [Bitdsk-s1-Miner](https://github.com/bitdsk/Bitdsk-s1-Miner) | S1 firmware source code (MIT) |
 
 No firmware binaries are stored in this repository. The firmware page reads `data/firmware.json`
