@@ -43,14 +43,26 @@ Full side-by-side specs: [Version comparison](docs/version-comparison.html).
 ## Updating firmware
 
 **OTA upgrade** is what you want almost always. Download the `.zip` for your model, open the miner's
-web UI, go to **Settings → Firmware** and upload it. Your settings and CD KEY are preserved.
+web UI, go to **Settings → Firmware** and upload it. Your settings are preserved.
 
-**Full erase and reflash** is for a bricked board, a wiped CD KEY, or a device that will not boot.
-It needs a USB cable and a Chromium-based browser (Chrome or Edge) — the flasher talks to the ESP32
-over Web Serial and runs entirely in the page.
+**Full erase and reflash** is for a bricked board, a device that will not boot, or a U1/U2 whose
+CD KEY was wiped. It needs a USB cable and a Chromium-based browser (Chrome or Edge) — the flasher
+talks to the ESP32 over Web Serial and runs entirely in the page.
 
-> **Back up your CD KEY first.** It is shown under **Settings → System**. If the key is lost it cannot
-> be recovered, and a backup is the only way to bring a device back after a full erase.
+### The CD KEY only exists on U1 and U2
+
+| Model | CD KEY |
+|---|---|
+| **U1 Touch**, **U2 Touch** | Yes — shown under **Settings → System** |
+| **N8-T**, **D12 / D12-T**, **N5 series**, legacy boards | No |
+| **S1** | No — open-source firmware, no key at all |
+
+On a U1 or U2 the key is stored in the device's NVS partition. An OTA upgrade keeps it, a full erase
+wipes it. **Copy it down before you flash.** Once lost it cannot be recovered from the firmware, and
+typing the backup back in is the only way to bring the board back after a full erase.
+
+On every other model there is no key to save, so a full reflash is just a full reflash — nothing to
+restore afterwards.
 
 ---
 
