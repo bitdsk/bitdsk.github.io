@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flash Tool — moved to a separate repository</title>
-<meta name="description" content="Browser flashing for Bitdsk S1, U1 and U2 now lives in a dedicated repository. This page is the entry point from the firmware archive.">
-<meta name="robots" content="noindex">
+<title>Flash tool — reflash a Bitdsk board over USB &middot; BITDSK LAB</title>
+<meta name="description" content="Reflash Bitdsk S1, U1 or U2 over USB from Chrome or Edge. Web Serial writes the complete bootable image — no installer, no server, nothing uploaded.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -22,6 +21,7 @@
   </a>
   <nav class="nav" id="nav">
    <a href="index.html">Home</a>
+   <a href="products.html">Products</a>
    <a href="firmware.html">Firmware</a>
    <a href="flash.html" class="active">Flash</a>
    <a href="docs/docs.html">Docs</a>
@@ -36,57 +36,82 @@
 <div class="hero compact">
  <div class="glow-orb" style="width:380px;height:380px;right:-70px;top:-130px;background:radial-gradient(circle,var(--accent),transparent 65%)"></div>
  <div class="wrap">
-  <span class="badge"><span class="dot"></span>Moved &middot; dedicated repository</span>
-  <h1>The flasher now lives <span class="grad">on its own site</span></h1>
-  <p class="lead">S1, U1 and U2 are three different hardware designs, and their flash images are large. Keeping them next to the flasher keeps this archive light and lets the flashing page ship on its own schedule.</p>
+  <span class="badge"><span class="dot"></span>Browser flashing &middot; Web Serial</span>
+  <h1>Reflash a board <span class="grad">over USB</span></h1>
+  <p class="lead">Writes the complete bootable image &mdash; bootloader, partition table, NVS, application and OTA data &mdash; at the offsets the board expects. Nothing to install, nothing uploaded, no server involved.</p>
  </div>
 </div>
 
 <section class="block" style="padding-top:8px">
  <div class="wrap">
 
-  <div class="notice info">
-   <b>Nothing was lost.</b> Browser flashing still works exactly the same way &mdash; Chrome or Edge on desktop, USB cable, Web Serial. No PHP, no server-side code, no installer. The page and the images simply moved to a separate repository.
+  <div class="notice danger">
+   <b>A reflash erases the device.</b> Every setting is wiped. On <b>U1 and U2</b> that includes the <b>CD KEY</b> &mdash; copy it from <b>Settings &rarr; System</b> in the miner web UI first, because once lost it cannot be recovered from the firmware. <b>S1 has no CD KEY</b>, so there is nothing to save.
+   <br><br>
+   Only need to update a board that already works? Upload the OTA <code>.zip</code> from the <a href="firmware.html" style="color:var(--accent)">firmware archive</a> instead &mdash; it keeps your settings and, on U1/U2, the key.
   </div>
 
   <div class="sec-head" style="margin-top:34px">
    <div>
-    <div class="eyebrow">Go straight there</div>
-    <h2>Pick your board</h2>
-    <p>Each link opens the flasher anchored on the right board.</p>
+    <div class="eyebrow">Step 1 — pick your board</div>
+    <h2>Three boards, three images</h2>
+    <p>The images are not interchangeable. Pick the model printed on the device or its box.</p>
    </div>
   </div>
 
   <div class="flash-grid">
-   <div class="flash-card">
+
+   <div class="flash-card" id="s1">
+    <div class="fc-shot"><img src="images/products/s1.jpg" alt="Bitdsk S1 running on a CYD board" width="800" height="600" loading="lazy" decoding="async"></div>
     <div class="mc-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
      <h3>Bitdsk S1</h3>
      <span class="pill flash">v_1.5</span>
     </div>
     <div class="fc-sub">CYD-2432S028 &middot; ESP32 &middot; no ASIC</div>
-    <p style="color:var(--muted);font-size:13.5px;margin:0">Off-the-shelf CYD reference board. Independent firmware &mdash; not interchangeable with U series. No CD KEY to save.</p>
+    <p style="color:var(--muted);font-size:13.5px;margin:0">Runs on the off-the-shelf <b>CYD</b> board. The ESP32 hashes by itself, so this is a desk display and a learning platform rather than a money maker. Firmware is MIT licensed and open source.</p>
+    <div class="spec-mini">
+     <span><b>600k&ndash;800k</b> H/s</span>
+     <span><b>USB</b> 5V</span>
+     <span><b>2.8&Prime;</b> touch</span>
+    </div>
+    <a class="src-link" href="https://github.com/bitdsk/Bitdsk-s1-Miner" target="_blank" rel="noopener">
+     Source code &amp; build guide on GitHub &#8599;
+    </a>
     <a class="btn btn-primary" href="#" data-flash="#s1">Open S1 flasher &#8599;</a>
    </div>
 
-   <div class="flash-card">
+   <div class="flash-card" id="u1">
+    <div class="fc-shot"><img src="images/products/u1.jpg" alt="Bitdsk U1 Touch miner" width="800" height="600" loading="lazy" decoding="async"></div>
     <div class="mc-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
      <h3>Bitdsk U1 Touch</h3>
      <span class="pill flash">v_1.5.2</span>
     </div>
     <div class="fc-sub">In-house &middot; ESP32 &middot; 200G class</div>
-    <p style="color:var(--muted);font-size:13.5px;margin:0">Our own single-ASIC board. Image ships without a CD KEY &mdash; re-enter your backup afterwards.</p>
+    <p style="color:var(--muted);font-size:13.5px;margin:0">Single-ASIC board with a 2.8&Prime; touchscreen, 200G at about 10&nbsp;W. The image ships without a CD KEY &mdash; re-enter your backup afterwards.</p>
+    <div class="spec-mini">
+     <span><b>200G</b></span>
+     <span><b>&asymp;10&nbsp;W</b></span>
+     <span><b>2.8&Prime;</b> touch</span>
+    </div>
     <a class="btn btn-primary" href="#" data-flash="#u1">Open U1 flasher &#8599;</a>
    </div>
 
-   <div class="flash-card">
+   <div class="flash-card" id="u2">
+    <div class="fc-shot"><img src="images/products/u2.jpg" alt="Bitdsk U2 Touch miner" width="800" height="600" loading="lazy" decoding="async"></div>
     <div class="mc-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
      <h3>Bitdsk U2 Touch</h3>
      <span class="pill flash">v_1.5.2</span>
     </div>
     <div class="fc-sub">In-house &middot; ESP32 &middot; 1100&ndash;1500G class</div>
-    <p style="color:var(--muted);font-size:13.5px;margin:0">Different silicon from U1. Shares the same application image; only the NVS partition identifies the model. Carries a CD KEY &mdash; re-enter your backup afterwards.</p>
+    <p style="color:var(--muted);font-size:13.5px;margin:0">Different silicon from U1, 1100&ndash;1500G at 22&ndash;27&nbsp;W. Shares the application image with U1; only the NVS partition identifies the model. Carries a CD KEY &mdash; re-enter your backup afterwards.</p>
+    <div class="spec-mini">
+     <span><b>1100&ndash;1500G</b></span>
+     <span><b>&asymp;22&ndash;27&nbsp;W</b></span>
+     <span><b>2.8&Prime;</b> touch</span>
+    </div>
     <a class="btn btn-primary" href="#" data-flash="#u2">Open U2 flasher &#8599;</a>
    </div>
+
   </div>
 
   <div id="flash-missing" class="notice danger" style="display:none">
@@ -96,36 +121,39 @@
    and these buttons will point at it.
   </div>
 
-  <div class="notice" style="margin-top:26px">
-   <b>N5 series, N8 series and legacy boards are not flashed in the browser.</b>
-   Those devices update by uploading a <code>.zip</code> through the miner web UI &mdash; the files are right here in the
-   <a href="firmware.html" style="color:var(--accent)">firmware archive</a>.
-  </div>
-
-  <div class="sec-head" style="margin-top:38px">
+  <div class="sec-head" style="margin-top:40px">
    <div>
-    <div class="eyebrow">Why a separate repository</div>
-    <h2>What moved and what stayed</h2>
+    <div class="eyebrow">Step 2 — before you connect</div>
+    <h2>What you need</h2>
    </div>
   </div>
 
   <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))">
    <div class="card">
-    <h3 style="margin-top:0">Moved to the flasher</h3>
+    <h3 style="margin-top:0">Requirements</h3>
     <ol class="steps">
-     <li>The flashing page itself, plus the Web Serial component (bundled locally, no CDN).</li>
-     <li>Full flash images for S1, U1 and U2 &mdash; bootloader, partition table, NVS, app, OTA data.</li>
-     <li>The <code>manifest.json</code> for each board that tells the flasher where to write.</li>
+     <li><b>Desktop Chrome or Edge.</b> Web Serial does not exist in Safari, Firefox or on mobile.</li>
+     <li><b>A data-capable USB cable.</b> Charge-only cables are the most common reason nothing shows up.</li>
+     <li><b>HTTPS.</b> The browser blocks serial access on plain <code>http://</code> pages.</li>
+     <li><b>CP210x / CH34x driver on Windows</b> if no COM port appears.</li>
     </ol>
    </div>
    <div class="card">
-    <h3 style="margin-top:0">Stayed in this archive</h3>
+    <h3 style="margin-top:0">Procedure</h3>
     <ol class="steps">
-     <li>All OTA <code>.zip</code> downloads for N5, N8 and legacy boards.</li>
-     <li>U series OTA single image and UI theme backgrounds.</li>
-     <li>Every guide, API reference and version comparison page.</li>
+     <li>Open the flasher for your board above and connect the USB cable.</li>
+     <li>Pick the serial port that appears &mdash; usually <code>CP210x</code> or <code>CH34x</code>.</li>
+     <li>Keep <b>Erase device</b> checked for a clean install.</li>
+     <li>Wait for <b>Installation complete</b>. Do not unplug while it writes.</li>
+     <li>Join the device's AP and open the web UI. On U1/U2, re-enter your CD KEY there.</li>
     </ol>
    </div>
+  </div>
+
+  <div class="notice" style="margin-top:26px">
+   <b>N5 series, N8 series and legacy boards are not flashed in the browser.</b>
+   Those devices update by uploading a <code>.zip</code> through the miner web UI &mdash; the files are in the
+   <a href="firmware.html" style="color:var(--accent)">firmware archive</a>.
   </div>
 
  </div>
@@ -136,10 +164,11 @@
   <div class="frow">
    <div class="fcol">
     <b>BITDSK LAB</b>
-    <p style="margin:6px 0 0">Firmware archive, documentation and operating guides. Flashing is hosted separately.</p>
+    <p style="margin:6px 0 0">Firmware archive, documentation and operating guides for the Bitdsk miner line.</p>
    </div>
    <div class="links">
     <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
     <a href="firmware.html">Firmware</a>
     <a href="docs/docs.html">Docs</a>
     <a href="docs/api.html">API</a>

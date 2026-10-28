@@ -21,6 +21,7 @@
   </a>
   <nav class="nav" id="nav">
    <a href="../index.html">Home</a>
+   <a href="../products.html">Products</a>
    <a href="../firmware.html">Firmware</a>
    <a href="../flash.html">Flash</a>
    <a href="docs.html">Docs</a>
@@ -38,6 +39,26 @@
   <h1>Bitdsk Miner Management tools on PC</h1>
   <div class="desc">Windows batch manager for monitoring and upgrading several miners at once.</div>
   <div class="notice info">Every build, with file size and SHA256, is also listed in the <a href="../firmware.html#tools" style="color:var(--accent)">firmware index</a>. Requires miner firmware &ge; all_3.0.0.</div>
+
+  <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));margin:22px 0">
+   <div class="card">
+    <h3 style="margin-top:0">What it does</h3>
+    <ul class="ticks">
+     <li>Lists every miner on your network in one table &mdash; name, IP, hashrate, uptime, accepted shares, best share and firmware version.</li>
+     <li>Edit pool settings on a miner without opening its web UI in another tab.</li>
+     <li>Reboot a board remotely.</li>
+     <li>Works without internet &mdash; 1.0.2 bundles its resources.</li>
+    </ul>
+   </div>
+   <div class="card">
+    <h3 style="margin-top:0">Setup</h3>
+    <ol class="steps">
+     <li>Unzip the release and open <code>config.js</code>.</li>
+     <li>Add the IP address of every miner you want to manage.</li>
+     <li>Start the manager. A row that does not answer shows as <code>waiting&hellip;</code> until the miner responds.</li>
+    </ol>
+   </div>
+  </div>
   <div class="panel">
    <content>
 <p class="wp-block-paragraph"></p>
@@ -83,6 +104,7 @@
   <div><b>BITDSK LAB</b> &mdash; Bitdsk documentation and firmware archive.</div>
   <div class="links">
    <a href="../index.html">Home</a>
+   <a href="../products.html">Products</a>
    <a href="../firmware.html">Firmware</a>
    <a href="../flash.html">Flash tool</a>
    <a href="docs.html">Docs</a>
@@ -90,7 +112,7 @@
    <a href="version-comparison.html">Versions</a>
   </div>
  </div>
- <div class="wrap" style="margin-top:16px;font-size:12.5px">Built as a pure static site for GitHub Pages. No server required.</div>
+ <div class="wrap" style="margin-top:16px;font-size:12.5px">&copy; Bitdsk Lab &mdash; firmware and documentation for the Bitdsk miner line.</div>
 </footer>
 <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
 <script src="../js/config.js"></script>

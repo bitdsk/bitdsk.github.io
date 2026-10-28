@@ -1,12 +1,11 @@
-# Bitdsk firmware & documentation
+# Bitdsk miners — products, firmware and docs
 
-Firmware archive and documentation site for Bitdsk miners.
+Product and support site for the Bitdsk miner line.
 
 This site replaces the old WordPress installation at [bitdsk.org](https://bitdsk.org). That
-installation is being retired: firmware, manuals, guides and the flash tool have all been migrated
-here, so nothing depends on the old host any more. It is a plain static site — no backend, no
-database — served from GitHub Pages. Everything here is a resource index: firmware downloads, user
-manuals, operating guides and the browser flash tool.
+installation is being retired: the product pages, firmware, manuals, guides and the flash tool have
+all been migrated here, so nothing depends on the old host any more. It is a plain static site — no
+backend, no database — served from GitHub Pages.
 
 ---
 
@@ -31,6 +30,7 @@ Full side-by-side specs: [Version comparison](docs/version-comparison.html).
 
 | I want to… | Go to |
 |---|---|
+| See what each board does and what it costs to run | [products.html](products.html) |
 | Download firmware for my model | [firmware.html](firmware.html) |
 | Flash a board over USB from the browser | [flash.html](flash.html) |
 | Read the user manual (PDF, EN/CN) | [docs/docs.html](docs/docs.html) |

@@ -83,6 +83,10 @@ section.block{padding:42px 0}
 }
 .model-card:hover{border-color:var(--line-2);transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.35)}
 .model-card::after{content:"";position:absolute;inset:0;border-radius:var(--radius);pointer-events:none;background:radial-gradient(400px 120px at 100% 0,rgba(91,140,255,.09),transparent 70%)}
+/* 产品图：出血到卡片边缘，4:3 统一裁切 */
+.model-card .mc-shot{margin:-22px -22px 18px;overflow:hidden;background:var(--bg-2);border-bottom:1px solid var(--line)}
+.model-card .mc-shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+.model-card:hover .mc-shot img{transform:scale(1.035)}
 .model-card .mc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
 .model-card .mc-name{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:0}
 .model-card .mc-sub{color:var(--muted);font-size:13px;margin-top:3px;font-family:var(--mono)}
@@ -93,6 +97,29 @@ section.block{padding:42px 0}
 .model-card .mc-latest{font-size:12.5px;color:var(--faint)}
 .model-card .mc-latest b{color:var(--text);font-family:var(--mono);font-weight:600}
 .model-card .mc-go{color:var(--accent);font-weight:600;font-size:13.5px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+
+/* ---------- 产品页：一行一台设备 ---------- */
+.prod-row{
+  display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+  gap:34px;align-items:center;padding:30px 0;border-top:1px solid var(--line);
+  scroll-margin-top:92px;
+}
+.prod-row:first-of-type{border-top:none;padding-top:6px}
+.pr-shot{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg-2);box-shadow:0 14px 40px rgba(0,0,0,.28)}
+.pr-shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.pr-head{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.pr-head h2{margin:0;font-size:26px;letter-spacing:-.022em}
+.pr-tag{color:var(--muted);font-size:15px;margin:0 0 18px;max-width:54ch;line-height:1.55}
+.pr-specs{width:100%;border-collapse:collapse;margin:0 0 18px}
+.pr-specs th{text-align:left;font-weight:500;color:var(--faint);font-size:12.5px;padding:7px 0;width:34%;vertical-align:top}
+.pr-specs td{color:var(--text);font-size:13.5px;padding:7px 0;border-bottom:1px solid rgba(30,43,68,.55)}
+.pr-specs td b{font-family:var(--mono);font-weight:600}
+.pr-specs tr:last-child td{border-bottom:none}
+.pr-links{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:860px){
+  .prod-row{grid-template-columns:1fr;gap:18px;padding:24px 0}
+  .pr-head h2{font-size:22px}
+}
 
 /* 状态徽标 */
 .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.02em;white-space:nowrap}
@@ -225,6 +252,15 @@ section.block{padding:42px 0}
 .flash-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--card),var(--bg-2));padding:24px;display:flex;flex-direction:column;gap:14px}
 .flash-card h3{margin:0;font-size:19px;letter-spacing:-.01em}
 .flash-card .fc-sub{color:var(--muted);font-size:13px;font-family:var(--mono);margin-top:-8px}
+/* 烧录卡产品图 */
+.flash-card .fc-shot{margin:-24px -24px 4px;overflow:hidden;background:var(--bg-2);border-bottom:1px solid var(--line);border-radius:var(--radius) var(--radius) 0 0}
+.flash-card .fc-shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+/* 卡片内三格规格 */
+.spec-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:2px 0}
+.spec-mini span{padding:8px 6px;border-radius:8px;background:var(--bg-2);border:1px solid var(--line);text-align:center;font-size:11.5px;color:var(--faint);line-height:1.35}
+.spec-mini span b{display:block;color:var(--text);font-size:13px;font-family:var(--mono);font-weight:600;margin-bottom:1px}
+.src-link{display:inline-block;font-size:12.5px;color:var(--accent);text-decoration:none;padding:2px 0}
+.src-link:hover{text-decoration:underline}
 .flash-card .fc-parts{border-top:1px solid var(--line);padding-top:14px;margin-top:auto;font-size:12.5px}
 .flash-card .fc-parts summary{cursor:pointer;color:var(--faint);font-weight:600;list-style:none;display:flex;align-items:center;gap:6px}
 .flash-card .fc-parts summary::-webkit-details-marker{display:none}
@@ -241,10 +277,13 @@ esp-web-install-button button,.flash-card .btn-primary{
 esp-web-install-button button:hover,.flash-card .btn-primary:hover{filter:brightness(1.08)}
 .flash-card .unsupported{color:var(--rose);font-size:13px}
 
-.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px}
-.steps li{position:relative;padding-left:42px;color:var(--muted);font-size:14px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px}.steps li{position:relative;padding-left:42px;color:var(--muted);font-size:14px}
 .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-1px;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--card-2);border:1px solid var(--line-2);color:var(--accent);font-weight:700;font-size:12.5px;font-family:var(--mono)}
 .steps li b{color:var(--text)}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.ticks li{position:relative;padding-left:23px;color:var(--muted);font-size:13.8px;line-height:1.5}
+.ticks li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--green);font-weight:700;font-size:13px}
+.ticks li b{color:var(--text)}
 
 /* ---------- 页脚 ---------- */
 footer{border-top:1px solid var(--line);padding:40px 0 44px;margin-top:48px;color:var(--faint);font-size:13.5px}

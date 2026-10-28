@@ -33,11 +33,27 @@
     'esp32如何安装天线？': GUIDES + 'esp32-antenna-install-cn.html',
     '如何使用redir进行矿池转发？无抽水': GUIDES + 'redir-pool-forwarding-cn.html',
 
+    /* 旧商城（WooCommerce）—— 商城已停用，落到产品页 */
+    'shop': '/products.html',
+    'cart': '/products.html',
+    'checkout-2': '/products.html',
+    'checkout': '/products.html',
+    'my-account': '/products.html',
+    'support': '/guides/index.html',
+
+    /* 旧商品详情页 → 对应的产品锚点 */
+    'bitdsk-u1-touch-sha256-standalone-mining-node': '/products.html#u1',
+    'bitdsk-u2-touch-2-8-smart-standalone-bitcoin-miner': '/products.html#u2',
+    'bitdsk-n8-small-size-bitcoin-asic-miner': '/products.html#n8-t',
+    'bitdsk-n5-rexi-simple-desktop-bitcoin-asic-miner': '/products.html#n8-t',
+    'bitdsk-d12-t-sha256-standalone-mining-node': '/products.html#d12',
+    'bitdsk-s1-for-esp32-firmware-cyd-esp32-2432s028': '/products.html#s1',
+
     /* 没搬过来的新闻 / 商品页 → 落到最相关的资源页 */
-    'bitdsk-u1-touch-launch': '/firmware.html#u-series',
-    'bitdsk-u2-touch-launch': '/firmware.html#u-series',
-    'bit-horizon': '/firmware.html#u-series',
-    'violetpulse': '/firmware.html#u-series',
+    'bitdsk-u1-touch-launch': '/products.html#u1',
+    'bitdsk-u2-touch-launch': '/products.html#u2',
+    'bit-horizon': '/products.html#u1',
+    'violetpulse': '/products.html#u1',
     'bitdsk-d9': '/firmware.html#legacy',
     'bitdsk-q2': '/firmware.html#legacy',
     'bitdsk-n5-lite': '/firmware.html#legacy',
