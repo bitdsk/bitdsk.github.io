@@ -40,121 +40,55 @@
   <div class="desc">2026-04-07</div>
   <div class="panel"><content>
 
-<p class="wp-block-paragraph"></p>
-
-
-
 <p class="wp-block-paragraph"><strong>Guide V1.0 Beta</strong></p>
-
-
 
 <p class="wp-block-paragraph"><strong>Resources:</strong> Online Design Tool: <a target="_blank" rel="noreferrer noopener" href="https://www.bitdsk.org/u_ui_design">https://www.bitdsk.org/u_ui_design</a></p>
 
-
-
 <p class="wp-block-paragraph">Download our designed UI <a href="https://www.bitdsk.org/ui-lab-for-u-series" target="_blank" rel="noreferrer noopener">https://www.bitdsk.org/ui-lab-for-u-series</a></p>
-
-
 
 <p class="wp-block-paragraph">First, you can refer to the image below to learn how to customize the UI.</p>
 
-
-
 <figure class="wp-block-image size-full is-resized"><img loading="lazy" decoding="async" width="912" height="432" src="../images/wp-content/uploads/2026/04/image.png" alt="" class="wp-image-1459" style="aspect-ratio:2.1111660893946893;width:551px;height:auto" /></figure>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
 
 <h2 class="wp-block-heading">Create a background image (bg.bin).</h2>
 
-
-
 <p class="wp-block-paragraph">The background image must be a 320px * 240px BMP file. </p>
-
-
 
 <p class="wp-block-paragraph">You can generate the <code>bg.bin</code> file using the Online Design Tool at <a href="https://www.bitdsk.org/u_ui_design" target="_blank" rel="noreferrer noopener">https://www.bitdsk.org/u_ui_design</a>. Please ensure the format is correct.</p>
 
-
-
-<p class="wp-block-paragraph"></p>
-
-
-
 <h2 class="wp-block-heading">Let&#8217;s get started with our JSON design.</h2>
-
-
 
 <h3 class="wp-block-heading">Simple Design Overview:</h3>
 
-
-
 <p class="wp-block-paragraph">We need a <strong>bg.bin</strong> file and a snippet of <strong>JSON code</strong> to modify the UI.</p>
-
-
 
 <p class="wp-block-paragraph">If you only want to change the background, you will need to generate and upload the <strong>bg.bin</strong> file, then enter the following in the <strong>UI JSON</strong> field:</p>
 
-
-
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><pre class="code-block-pro-copy-button-pre" aria-hidden="true"><textarea class="code-block-pro-copy-button-textarea" tabindex="-1" aria-hidden="true" readonly>{"screen_main": {"bg_img": "@bg_storage"}}</textarea></pre><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #ECEFF4">{</span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">screen_main</span><span style="color: #ECEFF4">&quot;</span><span style="color: #D8DEE9FF">: </span><span style="color: #ECEFF4">{</span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">bg_img</span><span style="color: #ECEFF4">&quot;</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">@bg_storage</span><span style="color: #ECEFF4">&quot;</span><span style="color: #ECEFF4">}}</span></span></code></pre></div>
-
-
 
 <p class="wp-block-paragraph">Once entered, simply <strong>save and restart</strong>.</p>
 
-
-
-<p class="wp-block-paragraph"></p>
-
-
-
 <h3 class="wp-block-heading">Full Design Overview:</h3>
-
-
 
 <p class="wp-block-paragraph">The entire UI is divided into four main interfaces: <code>cont_main</code>, <code>cont_weather</code>, <code>cont_price</code>, and <code>cont_price2</code>. </p>
 
-
-
 <p class="wp-block-paragraph">Each interface contains various elements, and you can customize their color, font, background, position, and more.</p>
-
-
 
 <p class="wp-block-paragraph">The table below lists all available elements:</p>
 
-
-
 <figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>panel</th><th>id</th><th>Info</th></tr></thead><tbody><tr><td>cont_main</td><td>label_text_online_time</td><td>Plain text &#8220;online time&#8221;</td></tr><tr><td>cont_main</td><td>label_text_manage</td><td>Plain text &#8220;manage&#8221; for manage ip</td></tr><tr><td>cont_main</td><td>label_temp</td><td>Label, output temperature</td></tr><tr><td>cont_main</td><td>label_version</td><td>blank</td></tr><tr><td>cont_main</td><td>label_win_num</td><td>Label, output Winning blocks num</td></tr><tr><td>cont_main</td><td>img_logo</td><td>img logo</td></tr><tr><td>cont_main</td><td>label_text_difficulty</td><td>Plain text &#8220;difficulty&#8221; </td></tr><tr><td>cont_main</td><td>label_acc_rej</td><td>Label, output accept and reject num</td></tr><tr><td>cont_main</td><td>label_best_share</td><td>Label, output best share</td></tr><tr><td>cont_main</td><td>label_online_time</td><td>Label, output online time</td></tr><tr><td>cont_main</td><td>label_pool_url</td><td>Label, output pool url</td></tr><tr><td>cont_main</td><td>label_manage_ip</td><td>Label, output manage_ip</td></tr><tr><td>cont_main</td><td>label_pool_difficulty</td><td>Label, output pool_difficulty</td></tr><tr><td>cont_main</td><td>label_text_best_share</td><td>Plain text &#8220;best share&#8221;</td></tr><tr><td>cont_main</td><td>label_main_hashrate</td><td>Label, output hashrate</td></tr><tr><td>cont_main</td><td>label_text_acc_rej</td><td>Plain text &#8220;acc/rej&#8221;</td></tr><tr><td>cont_main</td><td>label_tip</td><td>Label, output prompt text, such as hash test, CD key status.</td></tr></tbody></table></figure>
-
-
 
 <figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>panel</th><th>id</th><th>info</th></tr></thead><tbody><tr><td>cont_weather</td><td>line_0du</td><td>a horizontal straight line</td></tr><tr><td>cont_weather</td><td>line_90du</td><td>A vertical straight line</td></tr><tr><td>cont_weather</td><td>label_weather_icon</td><td>Image showing the current weather</td></tr><tr><td>cont_weather</td><td>label_hashrate2</td><td>Label, output hashrate</td></tr><tr><td>cont_weather</td><td>label_text_logo2</td><td>text logo &#8220;bitdsk&#8221;</td></tr><tr><td>cont_weather</td><td>label_city</td><td>Label, output city</td></tr><tr><td>cont_weather</td><td>label_ymd</td><td>Label, output date</td></tr><tr><td>cont_weather</td><td>label_text_hash2</td><td>Plain text &#8220;HASH&#8221;</td></tr><tr><td>cont_weather</td><td>label_week</td><td>Label, output week</td></tr><tr><td>cont_weather</td><td>label_text_temperature</td><td>Plain text &#8220;temperature&#8221;</td></tr><tr><td>cont_weather</td><td>label_temperature</td><td>Label, output temperature</td></tr><tr><td>cont_weather</td><td>label_weather_str</td><td>Label, output weather text</td></tr><tr><td>cont_weather</td><td>label_time2</td><td>Label, output time</td></tr></tbody></table></figure>
 
-
-
 <figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>panel</th><th>id</th><th>info</th></tr></thead><tbody><tr><td>cont_price</td><td>label_text_binance3</td><td>Plain text &#8220;Binance&#8221;</td></tr><tr><td>cont_price</td><td>label_price_top</td><td>Label, output price of top</td></tr><tr><td>cont_price</td><td>label_text_hash3</td><td>Plain text &#8220;HASH&#8221;</td></tr><tr><td>cont_price</td><td>label_p6</td><td>Label, output Price in the 6th range</td></tr><tr><td>cont_price</td><td>label_p5</td><td>Label, output Price in the 5th range</td></tr><tr><td>cont_price</td><td>label_p4</td><td>Label, output Price in the 4th range</td></tr><tr><td>cont_price</td><td>label_p3</td><td>Label, output Price in the 3th range</td></tr><tr><td>cont_price</td><td>label_p2</td><td>Label, output Price in the 2th range</td></tr><tr><td>cont_price</td><td>label_p1</td><td>Label, output Price in the 1th range</td></tr><tr><td>cont_price</td><td>label_hash3</td><td>Label, output hashrate </td></tr><tr><td>cont_price</td><td>chart_price</td><td>price chart</td></tr><tr><td>cont_price</td><td>img_logo3</td><td>logo</td></tr><tr><td>cont_price</td><td>label_coine_name3</td><td>Label, output coin name</td></tr></tbody></table></figure>
-
-
 
 <figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>panel</th><th>id</th><th>info</th></tr></thead><tbody><tr><td>cont_price2</td><td>label_text_binanceprice</td><td>Plain text &#8220;Binance Price&#8221;</td></tr><tr><td>cont_price2</td><td>label_text_hash4</td><td>Plain text &#8220;HASH&#8221;</td></tr><tr><td>cont_price2</td><td>label_hash4</td><td>Label, output hashrate </td></tr><tr><td>cont_price2</td><td>label_price5</td><td>Label, output the price of the 5th coin</td></tr><tr><td>cont_price2</td><td>label_price4</td><td>Label, output the price of the 4th coin</td></tr><tr><td>cont_price2</td><td>label_price3</td><td>Label, output the price of the 3th coin</td></tr><tr><td>cont_price2</td><td>label_price2</td><td>Label, output the price of the 2th coin</td></tr><tr><td>cont_price2</td><td>label_price1</td><td>Label, output the price of the 1th coin</td></tr><tr><td>cont_price2</td><td>label_price5_name</td><td>Label, output the name of the 5th coin</td></tr><tr><td>cont_price2</td><td>label_price4_name</td><td>Label, output the name of the 4th coin</td></tr><tr><td>cont_price2</td><td>label_price3_name</td><td>Label, output the name of the 3th coin</td></tr><tr><td>cont_price2</td><td>label_price2_name</td><td>Label, output the name of the 2th coin</td></tr><tr><td>cont_price2</td><td>label_price1_name</td><td>Label, output the name of the 1th coin</td></tr><tr><td>cont_price2</td><td>label_text_logo4</td><td>Plain text &#8220;Bitdsk&#8221;</td></tr></tbody></table></figure>
 
-
-
 <p class="wp-block-paragraph"><br><strong>Available fonts</strong></p>
-
-
 
 <figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><td>dig10,dig11,dig14,dig15,dig16,dig20,dig40,dig65,dig80</td><td><img loading="lazy" decoding="async" width="134" height="53" class="wp-image-1523" style="width: 134px;" src="../images/wp-content/uploads/2026/04/image-3.png" alt=""></td></tr><tr><td>sans8,sans9,sans10,sans12,sans14,sans16,sans20</td><td><img loading="lazy" decoding="async" width="150" height="58" class="wp-image-1522" style="width: 150px;" src="../images/wp-content/uploads/2026/04/image-2.png" alt=""></td></tr><tr><td>disp12,disp16,disp18</td><td><img loading="lazy" decoding="async" width="116" height="53" class="wp-image-1524" style="width: 116px;" src="../images/wp-content/uploads/2026/04/image-4.png" alt=""></td></tr><tr><td>lite15</td><td><img loading="lazy" decoding="async" width="103" height="50" class="wp-image-1525" style="width: 103px;" src="../images/wp-content/uploads/2026/04/image-5.png" alt="" /></td></tr><tr><td>serif11</td><td><img loading="lazy" decoding="async" width="97" height="53" class="wp-image-1526" style="width: 97px;" src="../images/wp-content/uploads/2026/04/image-6.png" alt=""></td></tr></tbody></table></figure>
 
-
-
 <p class="wp-block-paragraph">Basic JSON format：</p>
-
-
 
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><pre class="code-block-pro-copy-button-pre" aria-hidden="true"><textarea class="code-block-pro-copy-button-textarea" tabindex="-1" aria-hidden="true" readonly> {
    "screen_main": {
@@ -278,27 +212,13 @@
 <span class="line"><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">}</span></span>
 <span class="line"><span style="color: #D8DEE9FF"> </span></span></code></pre></div>
 
-
-
-<p class="wp-block-paragraph"></p>
-
-
-
 <p class="wp-block-paragraph">The following section, which is the beginning of the JSON, is used to trigger the use of the background image .bin file. If it is not included, the background image will not be loaded, and only the stylesheet will be applied.</p>
-
-
 
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><pre class="code-block-pro-copy-button-pre" aria-hidden="true"><textarea class="code-block-pro-copy-button-textarea" tabindex="-1" aria-hidden="true" readonly>   "screen_main": {
      "bg_img": "@bg_storage"
    },</textarea></pre><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">   </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">screen_main</span><span style="color: #ECEFF4">&quot;</span><span style="color: #D8DEE9FF">: </span><span style="color: #ECEFF4">{</span></span>
 <span class="line"><span style="color: #D8DEE9FF">     </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">bg_img</span><span style="color: #ECEFF4">&quot;</span><span style="color: #ECEFF4">:</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">@bg_storage</span><span style="color: #ECEFF4">&quot;</span></span>
 <span class="line"><span style="color: #D8DEE9FF">   </span><span style="color: #ECEFF4">},</span></span></code></pre></div>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
 
 <pre id="tw-target-text" class="wp-block-preformatted"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Tip: We recommend compressing the UI JSON file when uploading it.</mark></strong></pre>
 
@@ -324,6 +244,11 @@
   <div class="fine">Archived guide — content reproduced as published; some links point to external sites.</div>
  </div>
 </footer>
+
+<a class="discord-fab" href="https://discord.com/invite/qJ7zMcj88a" target="_blank" rel="noopener" aria-label="Join the Bitdsk Discord">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.029.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+ <span class="dfab-tip">Join us on Discord</span>
+</a>
 
 <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
 <script src="../js/config.js"></script>

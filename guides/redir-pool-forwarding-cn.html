@@ -42,93 +42,47 @@
 
 <p class="wp-block-paragraph">我们将用一个例子来说明。例如需要连接的矿池为：stratum+tcp://public-pool.io:21496</p>
 
-
-
 <p class="wp-block-paragraph">其中stratum+tcp://代表协议，还有一个比较流行的stratum+ssl://。目前bitdsk只支持前者，即tcp。</p>
-
-
 
 <p class="wp-block-paragraph">public-pool.io代表需要连接的矿池服务器地址</p>
 
-
-
 <p class="wp-block-paragraph">21496代表连接的端口。</p>
-
-
 
 <p class="wp-block-paragraph">对应的后台配置填写如下：</p>
 
-
-
 <figure class="wp-block-image"><img loading="lazy" decoding="async" width="465" height="233" src="../images/wp-content/uploads/2025/01/2025-01-26_02-13.jpg" alt="" class="wp-image-592" /></figure>
-
-
 
 <p class="wp-block-paragraph">下面说明如何转发</p>
 
-
-
 <p class="wp-block-paragraph">1：您需要购买一台云服务器，最好是国外的可以正常访问的。推荐一个可以找到这些资源的 URL：Google 搜索：vpser<br>注意：您需要一些知识才能确保您可以管理和运行此云服务器</p>
-
-
 
 <p class="wp-block-paragraph">2：使用ssh软件登录云服务器，运行命令更新系统（这里以ubuntu/debian系统为例）</p>
 
-
-
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="sudo apt-get update" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">sudo apt</span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF">get update</span></span></code></pre></div>
-
-
 
 <pre class="wp-block-code"><code></code></pre>
 
-
-
 <figure class="wp-block-image"><img loading="lazy" decoding="async" width="708" height="333" src="../images/wp-content/uploads/2025/01/image-1.png" alt="" class="wp-image-593" /></figure>
-
-
 
 <p class="wp-block-paragraph">3：更新完成后安装redir</p>
 
-
-
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="sudo apt-get install redir" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">sudo apt</span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF">get install redir</span></span></code></pre></div>
-
-
 
 <p class="wp-block-paragraph">4：安装完成后配置redir</p>
 
-
-
 <p class="wp-block-paragraph">命令： sudo redir</p>
-
-
 
 <p class="wp-block-paragraph">eg：</p>
 
-
-
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="sudo redir :2345 public-pool.io:21496" style="color:#d8dee9ff;display:none" aria-label="复制" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></span><pre class="shiki nord" style="background-color: #2e3440ff" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">sudo redir </span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">2345</span><span style="color: #D8DEE9FF"> public</span><span style="color: #81A1C1">-</span><span style="color: #D8DEE9FF">pool</span><span style="color: #ECEFF4">.</span><span style="color: #D8DEE9FF">io</span><span style="color: #ECEFF4">:</span><span style="color: #B48EAD">21496</span></span></code></pre></div>
-
-
 
 <p class="wp-block-paragraph">注：冒号和空格均为英文格式</p>
 
-
-
 <p class="wp-block-paragraph">5：修改bitdsk后台矿池配置。例如我购买的云服务器IP地址为：123.123.123.123</p>
-
-
 
 <figure class="wp-block-image"><img loading="lazy" decoding="async" width="465" height="187" src="../images/wp-content/uploads/2025/01/image-2.png" alt="" class="wp-image-594" /></figure>
 
-
-
 <p class="wp-block-paragraph">6: 保存并重启bitdsk</p>
-
-
-
-<p class="wp-block-paragraph"></p>
 
 </content></div>
  </article>
@@ -152,6 +106,11 @@
   <div class="fine">Archived guide — content reproduced as published; some links point to external sites.</div>
  </div>
 </footer>
+
+<a class="discord-fab" href="https://discord.com/invite/qJ7zMcj88a" target="_blank" rel="noopener" aria-label="Join the Bitdsk Discord">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.029.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+ <span class="dfab-tip">Join us on Discord</span>
+</a>
 
 <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
 <script src="../js/config.js"></script>

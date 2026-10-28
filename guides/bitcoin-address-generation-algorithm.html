@@ -42,39 +42,21 @@
 
 <p class="wp-block-paragraph">Step 1: is to randomly select a 32 byte number with a size between 1 and 0xFFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFE BAAE DCE6 AF48 A03B BFD2 5E8C D036 4141 as the private key<br>18e14a7b6a307f426a94f8114701e7c8e774e7f9a47e2c2035db29a206321725</p>
 
-
-
 <p class="wp-block-paragraph"><br>Step 2, use the elliptic curve encryption algorithm (ECDSA-SECP256k1) to calculate the uncompressed public key corresponding to the private key (a total of 65 bytes, 1 byte 0x04, 32 bytes as the x-coordinate, and 32 bytes as the y-coordinate).<br>0450863AD64A87AE8A2FE83C1AF1A8403CB53F53E486D8511DAD8A04887E5B23522CD470243453A299FA9E77237716103ABC11A1DF38855ED6F2EE187E9C582BA6</p>
-
-
 
 <p class="wp-block-paragraph"><br>Step 3: Calculate the SHA-256 hash value of the public key<br>600FFE422B4E00731A59557A5CCA46CC183944191006324A447BDB2D98D4B408</p>
 
-
-
 <p class="wp-block-paragraph"><br>Step 4:calculate the RIPEMD-160 hash value of the previous step&#8217;s hash value<br>010966776006953D5567439E5E39F86A0D273BEE</p>
-
-
 
 <p class="wp-block-paragraph"><br>Step 5, add the address version number (such as Bitcoin mainnet version number &#8220;0x00&#8221;) between the results of the previous step<br>00010966776006953D5567439E5E39F86A0D273BEE</p>
 
-
-
 <p class="wp-block-paragraph"><br>Step 6: Calculate the SHA-256 hash value of the previous step&#8217;s result<br>445C7A8007A93D8733188288BB320A8FE2DEBD2AE1B47F0F50BC10BAE845C094</p>
-
-
 
 <p class="wp-block-paragraph"><br>Step 7, recalculate the SHA-256 hash value of the previous step&#8217;s result<br>D61967F63C7DD183914A4AE452C9F6AD5D462CE3D277798075B107615C1A8A30</p>
 
-
-
 <p class="wp-block-paragraph"><br>Step 8, take the first 4 bytes (8-bit hexadecimal number) D61967F6 from the previous step&#8217;s result, and add these 4 bytes to the end of the fifth step&#8217;s result as a checksum (this is the hexadecimal form of Bitcoin address)<br>00010966776006953D5567439E5E39F86A0D273BEED61967F6</p>
 
-
-
 <p class="wp-block-paragraph"><br>Step 9, use base58 notation to transform the address (this is the most common form of Bitcoin address)<br>16UwLL9Risc3QfPqBUvKofHmBQ7wMtjvM</p>
-
-
 
 <div class="wp-block-kevinbatdorf-code-block-pro" data-code-block-pro-font-family="Code-Pro-JetBrains-Mono" style="font-size:.875rem;font-family:Code-Pro-JetBrains-Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;line-height:1.25rem;--cbp-tab-width:2;tab-size:var(--cbp-tab-width, 2)"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg></span><span role="button" tabindex="0" data-code="import hashlib
 from ecdsa import SECP256k1, SigningKey
@@ -236,18 +218,10 @@ if __name__ == &quot;__main__&quot;:
 <span class="line"><span style="color: #D8DEE9FF">    bitcoin_address </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">base58_encode</span><span style="color: #ECEFF4">(</span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">00</span><span style="color: #ECEFF4">&quot;</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> public_address</span><span style="color: #ECEFF4">)</span></span>
 <span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #88C0D0">print</span><span style="color: #ECEFF4">(</span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">Final address </span><span style="color: #EBCB8B">%s</span><span style="color: #ECEFF4">&quot;</span><span style="color: #81A1C1">%</span><span style="color: #D8DEE9FF">bitcoin_address</span><span style="color: #ECEFF4">)</span></span></code></pre></div>
 
-
-
 <pre class="wp-block-code"><code>
 </code></pre>
 
-
-
 <figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="142" src="../images/wp-content/uploads/2024/10/ssww33-1024x142.png" alt="" class="wp-image-284" /></figure>
-
-
-
-<p class="wp-block-paragraph"></p>
 
 </content></div>
  </article>
@@ -271,6 +245,11 @@ if __name__ == &quot;__main__&quot;:
   <div class="fine">Archived guide — content reproduced as published; some links point to external sites.</div>
  </div>
 </footer>
+
+<a class="discord-fab" href="https://discord.com/invite/qJ7zMcj88a" target="_blank" rel="noopener" aria-label="Join the Bitdsk Discord">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.029.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+ <span class="dfab-tip">Join us on Discord</span>
+</a>
 
 <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
 <script src="../js/config.js"></script>

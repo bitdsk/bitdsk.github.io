@@ -40,279 +40,134 @@
   <div class="desc">API documentation.</div>
   <div class="panel">
    <content>
-<p class="wp-block-paragraph"></p>
-
-
 
 <p class="wp-block-paragraph">Here is the professional English translation of the technical instructions, tailored for your users. I have provided a standard version and a more detailed version depending on where you are using it (e.g., in a manual or a UI tooltip).</p>
 
-
-
 <h3 class="wp-block-heading">Standard Technical Translation (Recommended)</h3>
-
-
 
 <blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
 <p class="wp-block-paragraph"><strong>API Reference Data</strong> The API request format is: <code>http://&lt;base_ip&gt;&lt;api_endpoint&gt;</code></p>
 
-
-
 <p class="wp-block-paragraph"><strong>Example:</strong> &gt; If your management IP address is <strong>192.168.1.100</strong>, the request URL would be: <code>http://192.168.1.100/api/system/info</code></p>
 </blockquote>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:   /api/set_brightness </strong></p>
 
-
-
 <p class="wp-block-paragraph">method： HTTP_POST</p>
-
-
 
 <p class="wp-block-paragraph">Set screen brightness,Valid values ​​0-100    <strong>[For  S1 and U1]</strong></p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:   /api/system/info</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_GET</p>
-
-
 
 <p class="wp-block-paragraph">Response</p>
 
-
-
 <figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th>Field</th><th>type</th><th>explanation</th></tr></thead><tbody><tr><td>hashRate</td><td>num</td><td>current hashrate</td></tr><tr><td>hashRateavg</td><td>num</td><td>It&#8217;s of no use at this stage</td></tr><tr><td>bestDiff</td><td>str</td><td>Best share String</td></tr><tr><td>networkdiff</td><td>num</td><td>Network Difficulty</td></tr><tr><td>frequency</td><td>num</td><td>ASIC FREQ (The field s1 is meaningless.)</td></tr><tr><td>minerversion</td><td>str</td><td>version</td></tr><tr><td>boardVersion</td><td>str</td><td>BOARD_VERSION</td></tr><tr><td>watchdogtime</td><td>num</td><td>0:false  A value greater than 0 corresponds to the set time, in seconds.</td></tr><tr><td>screen_type</td><td>num</td><td></td></tr><tr><td>ssid</td><td>str</td><td>wifi ssid</td></tr><tr><td>hostname</td><td>str</td><td></td></tr><tr><td>wifiPass</td><td>str</td><td></td></tr><tr><td>wifiStatus</td><td>str</td><td></td></tr><tr><td>sharesAccepted</td><td>num</td><td></td></tr><tr><td>sharesRejected</td><td>num</td><td></td></tr><tr><td>uptimeSeconds</td><td>num</td><td>online time(Seconds)</td></tr><tr><td>stratumURL</td><td>str</td><td></td></tr><tr><td>stratumPort</td><td>num</td><td></td></tr><tr><td>stratumUser</td><td>str</td><td></td></tr><tr><td>stratumPassword</td><td>str</td><td></td></tr><tr><td>stratum_difficulty</td><td>num</td><td></td></tr><tr><td>invertscreen</td><td>num</td><td></td></tr><tr><td>fenping</td><td>num</td><td>for color screen.eg: d12 and s1 /u1/y7</td></tr><tr><td>flipscreen</td><td>num</td><td></td></tr><tr><td>screenld</td><td>num</td><td>screen brightness.0-100 (for s1 and u1)</td></tr><tr><td>staticipopen</td><td>num</td><td>0:false  1:true</td></tr><tr><td>staticip</td><td>str</td><td></td></tr><tr><td>staticnetmask</td><td>str</td><td></td></tr><tr><td>staticopengw</td><td>str</td><td></td></tr><tr><td>dnsmain</td><td>str</td><td></td></tr><tr><td>dnsbackup</td><td>str</td><td></td></tr><tr><td>dnsfallback</td><td>str</td><td></td></tr><tr><td>tianqijiekou</td><td>num</td><td>for d12 .This field will be obsolete in the future; it should only be used to distinguish which weather API is being called.</td></tr><tr><td>xinzhimiyao</td><td>str</td><td>weather private key.This field will be obsolete in the future.</td></tr><tr><td>chengshi</td><td>str</td><td>city.for color screen.eg: d12 and s1 /u1/y7</td></tr><tr><td>shiqu</td><td>str</td><td>time zone.for color screen.eg: d12 and s1 /u1/y7</td></tr><tr><td>ntpserver</td><td>str</td><td>for color screen.eg: d12 and s1 /u1/y7</td></tr><tr><td>jingweidu</td><td>str</td><td>Accuracy and latitude.for d12.This field will be obsolete in the future; it should only be used to distinguish which weather API is being called.</td></tr><tr><td>wendudanwei</td><td>num</td><td> 2: metric temperature.other num: imperial temperature,</td></tr><tr><td>mycoinopen</td><td>num</td><td>Should I open coin price?0:false  1:true .for color screen.eg: d12 and s1 /u1</td></tr><tr><td>coinname1</td><td>str</td><td>coin name</td></tr><tr><td>coinname2</td><td>str</td><td></td></tr><tr><td>coinname3</td><td>str</td><td></td></tr><tr><td>coinname4</td><td>str</td><td></td></tr><tr><td>coinname5</td><td>str</td><td></td></tr><tr><td>boardtemp</td><td>num</td><td>for n8,u1</td></tr><tr><td>fanspeedrpm</td><td>num</td><td>for n8/y7(4 line fan).Current fan speed.</td></tr><tr><td>fanspeedbfb</td><td>num</td><td>for n8/y7(4 line fan).Current fan speed percentage.</td></tr><tr><td>defaultfanspeed</td><td>num</td><td>for n8/y7(4 line fan).Default fanspeed</td></tr><tr><td>fanpwmauto</td><td>num</td><td>Should I enable PWM auto-speed adjustment? 0:false  1:true.for n8/y7(4 line fan)</td></tr><tr><td>isfan</td><td>num</td><td>Y7 board is 1 ,other is 0</td></tr><tr><td></td><td></td><td></td></tr></tbody></table></figure>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/system/simpleinfo</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_GET</p>
-
-
 
 <p class="wp-block-paragraph">A relatively small amount of data was obtained.</p>
 
-
-
 <p class="wp-block-paragraph">Response: </p>
-
-
 
 <p class="wp-block-paragraph">hostname,  minerversion,  boardVersion,  screen_type,  stratumURL,  stratumPort,  stratumUser</p>
 
-
-
 <p class="wp-block-paragraph">Please refer to the table above for field types and explanations.</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/system/gethash</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_GET</p>
-
-
 
 <p class="wp-block-paragraph">Response: </p>
 
-
-
 <p class="wp-block-paragraph">hostname, minerversion, hashRate, hashRateavg, bestDiff, networkdiff, freeHeap, frequency, stratum_difficulty</p>
-
-
 
 <p class="wp-block-paragraph">sharesAccepted, sharesRejected, uptimeSeconds, boardtemp, fanspeedrpm, fanspeedbfb</p>
 
-
-
 <p class="wp-block-paragraph">Please refer to the table above for field types and explanations.</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/swarm/alldel</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_GET</p>
-
-
 
 <p class="wp-block-paragraph">System will del all swarm.</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/swarm/info</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_GET</p>
-
-
 
 <p class="wp-block-paragraph">Get all swarm info json.</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/hello</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_GET</p>
-
-
 
 <p class="wp-block-paragraph">Response: &#8220;bitdsk&#8221;</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/swarm</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_PATCH</p>
-
-
 
 <p class="wp-block-paragraph">update swarm</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/system/restart</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_POST</p>
-
-
 
 <p class="wp-block-paragraph">Reboot</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/system</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_PATCH</p>
-
-
 
 <p class="wp-block-paragraph">update settings.Please refer to the table above for field types and explanations.</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/wifi_setup</strong></p>
 
-
-
 <p class="wp-block-paragraph">method: HTTP_PATCH</p>
-
-
 
 <p class="wp-block-paragraph">update wifisetup.You can send Wi-Fi settings separately to this interface, which will result in a faster response and you won&#8217;t need to send the full form.</p>
 
-
-
 <p class="wp-block-paragraph">Required fields:  stratumURL,  stratumUser,  stratumPassword,  stratumPort,  ssid,  wifiPass</p>
 
-
-
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
 
 <p class="wp-block-paragraph"><strong>Request:  /api/system/OTA</strong></p>
 
-
-
 <p class="wp-block-paragraph">It is not recommended to use the OTA upgrade interface externally, as unpredictable errors may occur, which could brick the motherboard.</p>
-
-
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-
-
 <p class="wp-block-paragraph"><strong>Request:  /api/ws</strong></p>
-
-
 
 <p class="wp-block-paragraph">method: HTTP_GET</p>
 
-
-
 <p class="wp-block-paragraph">websocket: true</p>
-
-
 
 <p class="wp-block-paragraph">Log output.</p>
 </content>
@@ -335,6 +190,11 @@
  </div>
  <div class="wrap" style="margin-top:16px;font-size:12.5px">&copy; Bitdsk Lab &mdash; firmware and documentation for the Bitdsk miner line.</div>
 </footer>
+<a class="discord-fab" href="https://discord.com/invite/qJ7zMcj88a" target="_blank" rel="noopener" aria-label="Join the Bitdsk Discord">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.029.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+ <span class="dfab-tip">Join us on Discord</span>
+</a>
+
 <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
 <script src="../js/config.js"></script>
 <script src="../js/site.js"></script>

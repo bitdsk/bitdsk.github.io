@@ -251,6 +251,8 @@ section.block{padding:42px 0}
 .flash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
 .flash-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--card),var(--bg-2));padding:24px;display:flex;flex-direction:column;gap:14px}
 .flash-card h3{margin:0;font-size:19px;letter-spacing:-.01em}
+/* 三张卡的 CTA 对齐到卡片底部（S1 多一行源码链接，否则按钮会低一截） */
+.flash-card > .btn-primary{margin-top:auto}
 .flash-card .fc-sub{color:var(--muted);font-size:13px;font-family:var(--mono);margin-top:-8px}
 /* 烧录卡产品图 */
 .flash-card .fc-shot{margin:-24px -24px 4px;overflow:hidden;background:var(--bg-2);border-bottom:1px solid var(--line);border-radius:var(--radius) var(--radius) 0 0}

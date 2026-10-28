@@ -42,111 +42,57 @@
 
 <p class="wp-block-paragraph" id="tw-target-text"></p>
 
-
-
 <p class="wp-block-paragraph">By default almost all WiFi access points transmit at full power (100mW on 2.4GHz). This gives maximum coverage and users see a good signal (“full bars”). However, there are good reasons to turn down the transmit power to a fraction of the maximum.</p>
-
-
 
 <p class="wp-block-paragraph">It even makes sense to start with minimum power and increase it until the necessary area is covered.</p>
 
-
-
 <h4 class="wp-block-heading">0. Wi-Fi is about sharing, not competing</h4>
-
-
 
 <p class="wp-block-paragraph">In a congested environment it doesn’t matter if your access point is stronger than the neighbor’s. If your AP can receive other APs then it will share the air time with them by taking turns. All APs on the same channel will give other APs equal access to the spectrum. This is how 802.11 was written.<br>[Edit: I added this point as an afterthought, since this isn’t obvious to many users.]</p>
 
-
-
 <h4 class="wp-block-heading">1. Full power doesn’t increase coverage</h4>
-
-
 
 <p class="wp-block-paragraph">Mobile devices like phones and tablets have very limited batteries. To minimize power consumption their radios typically max at 15mW (12dBm), while access points max at 100mW (20dBm) on 2.4GHz and 200mW (23dBm) on 5GHz. However, WiFi connection is always bidirectional. It does no good if the client can receive the AP if the AP can’t receive the client. Have you ever been unable to connect – even though you appear to have good signal? This is the reason.</p>
 
-
-
 <p class="wp-block-paragraph">The bidirectional connection is symmetrical. It doesn’t matter if the AP has a better antenna or is located higher up. The antenna gain and any attenuation factors work symmetrically in both directions. So a good antenna and good location will improve the connection in both directions. Unilateral transmit power increase will only work in one direction.</p>
-
-
 
 <h4 class="wp-block-heading">2. Roaming</h4>
 
-
-
 <p class="wp-block-paragraph">In WiFi the client devices decide which access point they want to associate with and when to switch to next. (This is contrary to the mobile telephone network, where access points decide which one will serve which client.) Many devices are very reluctant to roam to another AP. They hold on to the first chosen one even when there is a much stronger AP next to the device. Only when the connection breaks will they associate with the next AP – and keep that connection to the end. This results in clients using far away access points with poor connections. By lowering the transmit power the connection will break sooner and the client will roam to a better access point.</p>
-
-
 
 <p class="wp-block-paragraph">This behaviour affects access point utilisation as well. In the worst scenario the access point by the entrance covers the entire office just barely. When users arrive their devices will associate with the entrance AP and keep using it for the rest of the day. The entrance AP is overloaded while other APs are idle.</p>
 
-
-
 <h4 class="wp-block-heading">3. Battery life</h4>
-
-
 
 <p class="wp-block-paragraph">The access point informs the clients what its transmit power is (802.11h TPC, 802.11k TPC or Cisco DTPC). Mobile devices will adjust their transmit power level to match to save battery. The logic is that if the mobile device can receive the AP at that power level, the same applies in reverse as the symmetry was explained earlier. By setting the AP transmit power to 5mW (7dBm) for example, you can increase the battery life of the clients. Such a weak signal won’t penetrate walls, so you need more access points – see the next section&nbsp;<em>Performance…</em></p>
 
-
-
 <h4 class="wp-block-heading">4. Performance</h4>
-
-
 
 <p class="wp-block-paragraph">Back then access points were expensive and they were placed far apart. Now the price is no longer an issue, but WiFi performance is. By adding more access points there will be less clients per AP, hence more bandwidth per client.</p>
 
-
-
 <p class="wp-block-paragraph">Keep in mind that wires are always more efficient than radio waves. The faster and closer you can move the data from radio to wires, the better. That’s why increasing the number of low-powered access points is the key to a high performance WiFi network. Why low-power? See the next section&nbsp;<em>Interference…</em></p>
-
-
 
 <h4 class="wp-block-heading">5. Interference</h4>
 
-
-
 <p class="wp-block-paragraph">A powerful signal will interfere with neighbouring devices even if they are on different channels (frequencies). At high signal levels the whole device will act as an antenna and induction will cause superfluous signals in the circuits. This is why you need to keep access points at least 10′ (3m) apart or have a thick concrete wall in-between, preferably both.</p>
-
-
 
 <p class="wp-block-paragraph">Access points can still interfere with each other, even if there is enough distance. The WiFi channels are not absolute. While the transmission is on a certain channel, the signal bleeds to the neighbouring channels as well, albeit weaker. At high transmit power this weak signal will be strong enough to interfere.</p>
 
-
-
 <h4 class="wp-block-heading">6. Distortion</h4>
-
-
 
 <p class="wp-block-paragraph">If you drive an amplifier at full power the output will distort. This is easy to test with a car radio: turn it on full blast and try to make sense of the lyrics. A distorted signal is hard to decode and in WiFi parlance this means transmission errors and retransmissions, which will slow down the network. You can increase performance by lowering the transmit power.</p>
 
-
-
 <h4 class="wp-block-heading">7. Neighbourliness</h4>
-
-
 
 <p class="wp-block-paragraph">A strong signal will cause interference in a large area. Even though the extra milliwatts won’t benefit you, they will consume limited air time and interfere with all other WiFi networks in the area (look back at point 0 at the beginning of the article).</p>
 
-
-
 <p class="wp-block-paragraph">Think about it security wise as well: Why should anyone across the street be able to receive your WiFi signal?</p>
-
-
 
 <h4 class="wp-block-heading">8. Longer lifetime</h4>
 
-
-
 <p class="wp-block-paragraph">Lower transmit power equals lower energy consumption equals less heat. Operating at lower temperature increases equipment lifetime. While access points are inexpensive, they tend to break at the most inconvenient time and place. You won’t notice the energy savings on your electricity bill, though.</p>
 
-
-
 <p class="wp-block-paragraph"><a rel="noreferrer noopener" target="_blank" href="http://www.linkedin.com/sharing/share-offsite/?url=https://metis.fi/en/2017/10/txpower/"></a></p>
-
-
 
 <p class="wp-block-paragraph">Original link:<a href="https://metis.fi/en/2017/10/txpower/">https://metis.fi/en/2017/10/txpower/</a></p>
 
@@ -172,6 +118,11 @@
   <div class="fine">Archived guide — content reproduced as published; some links point to external sites.</div>
  </div>
 </footer>
+
+<a class="discord-fab" href="https://discord.com/invite/qJ7zMcj88a" target="_blank" rel="noopener" aria-label="Join the Bitdsk Discord">
+ <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.029.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+ <span class="dfab-tip">Join us on Discord</span>
+</a>
 
 <button class="backtop" id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
 <script src="../js/config.js"></script>
