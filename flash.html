@@ -134,20 +134,26 @@
     <ol class="steps">
      <li><b>Desktop Chrome or Edge.</b> Web Serial does not exist in Safari, Firefox or on mobile.</li>
      <li><b>A data-capable USB cable.</b> Charge-only cables are the most common reason nothing shows up.</li>
+     <li><b>U1 / U2: use the Flash Port.</b> Those boards have a dedicated port for flashing &mdash; use that one, not the power port. No USB-TTL adapter is needed. On S1 the CYD's single USB port carries both power and serial.</li>
      <li><b>HTTPS.</b> The browser blocks serial access on plain <code>http://</code> pages.</li>
-     <li><b>CP210x / CH34x driver on Windows</b> if no COM port appears.</li>
+     <li><b>Nothing else holding the port.</b> Close Arduino IDE, a serial monitor or any other tab that already has the board open.</li>
     </ol>
    </div>
    <div class="card">
     <h3 style="margin-top:0">Procedure</h3>
     <ol class="steps">
      <li>Open the flasher for your board above and connect the USB cable.</li>
-     <li>Pick the serial port that appears &mdash; usually <code>CP210x</code> or <code>CH34x</code>.</li>
+     <li>Pick the serial port that appears &mdash; the Flash Port shows up as a COM port.</li>
      <li>Keep <b>Erase device</b> checked for a clean install.</li>
      <li>Wait for <b>Installation complete</b>. Do not unplug while it writes.</li>
      <li>Join the device's AP and open the web UI. On U1/U2, re-enter your CD KEY there.</li>
     </ol>
    </div>
+  </div>
+
+  <div class="notice" style="margin-top:26px">
+   <b>No COM port in the list?</b> Check the cable is in the <b>Flash Port</b> and that it is a data cable, close anything else holding the port, and try another USB port.
+   On Windows, if the device shows up with a warning in Device Manager, install the USB-serial driver for that chip &mdash; the CYD board used by S1 is CH340.
   </div>
 
   <div class="notice" style="margin-top:26px">
